@@ -49,7 +49,7 @@ double* solveLaeWJacobiIterOfTridiagonalMatrix(double valueOFLowMinDiag, double 
             for(int i=1;i<n;i++) {
                 resi+=fabs(actualIteration[i]- lastIterSol[i]);
             }
-            std::cout << iteration <<": "<< resi<< std::endl;
+//            std::cout << iteration <<": "<< resi<< std::endl;
         }
 
 
@@ -76,28 +76,20 @@ double* solveLaeWJacobiIterOfTridiagonalMatrixVariMainDiag(double valueOFLowMinD
     double tol=0.0001;
     int iteration=0;
 
-    double* fTimesHsquare=new double[n];
-    double hsquare=h*h;
-
-    for(int i=0;i<n;i++) {
-        fTimesHsquare[i]=f[i]*hsquare;
-        lastIterSol[i]=fTimesHsquare[i]/valuesOfMainDiag[i];
-    }
-
-
-
 
     double resi;
     int end=n-1;
 
+
+
     while(iteration<maxIter) {
-        actualIteration[0] = 1 / valuesOfMainDiag[0] * (-valOfUpMinDiag * lastIterSol[1] + fTimesHsquare[0]);
+        actualIteration[0] = 1 / valuesOfMainDiag[0] * (-valOfUpMinDiag * lastIterSol[1] + f[0]);
         for (int i = 1; i < end; i++) {
             actualIteration[i] = 1 / valuesOfMainDiag[i] *
                                  (-valOfUpMinDiag * lastIterSol[i + 1] - valueOFLowMinDiag * lastIterSol[i - 1] +
-                                  fTimesHsquare[i]);
+                                  f[i]);
         }
-        actualIteration[end] = 1 / valuesOfMainDiag[end] * (-valueOFLowMinDiag * lastIterSol[end - 1] + fTimesHsquare[end]);
+        actualIteration[end] = 1 / valuesOfMainDiag[end] * (-valueOFLowMinDiag * lastIterSol[end - 1] + f[end]);
 
 
         if (!(iteration % (maxIter / 20))) {
@@ -105,7 +97,11 @@ double* solveLaeWJacobiIterOfTridiagonalMatrixVariMainDiag(double valueOFLowMinD
             for(int i=0;i<n;i++) {
                 resi+=fabs(actualIteration[i]- lastIterSol[i]);
             }
-            std::cout << iteration <<": "<< resi<< std::endl;
+//            std::cout << iteration <<": "<< resi<< std::endl;
+            if(resi<tol) {
+//                std::cout << "Residual below tolerance"<< std::endl;
+                break;
+            }
         }
 
 
@@ -216,7 +212,7 @@ double* solveLaeWJacobiIterOfBlockMatrix(double valueOfLowMinDiag, double valOfU
             for(int i=0;i<n*n;i++) {
                 resi+=fabs(actualIteration[i]- lastIterSol[i]);
             }
-            std::cout << iteration <<": "<< resi<< std::endl;
+//            std::cout << iteration <<": "<< resi<< std::endl;
         }
 
 
