@@ -230,3 +230,53 @@ double* solveLaeWJacobiIterOfBlockMatrix(double valueOfLowMinDiag, double valOfU
     return actualIteration;
 }
 
+double* jacobiIterOfBlockMatrixWithAlternatingLowUpDiag(double valLowMinDiag,double valLowBlockDiag, double valUpDiag,double valUpBlockDiag, double valMainDiag, double h, int n, double f) {
+
+    double* actualIteration=new double[n*n]();
+    double* lastIterSol=new double[n*n]();
+    int maxIter=5000;
+    double tol=0.0001;
+    int iteration=0;
+    double fTimesHsquare=h*h;
+    double resi;
+
+
+    while(iteration<maxIter) {
+
+
+        // first block = boundary with u=0
+
+
+
+
+
+
+
+
+
+
+
+
+
+        if (!(iteration % (maxIter / 10))) {
+            resi=0;
+            for(int i=0;i<n*n;i++) {
+                resi+=fabs(actualIteration[i]- lastIterSol[i]);
+            }
+//            std::cout << iteration <<": "<< resi<< std::endl;
+        }
+
+
+        for (int i = 0; i < n*n; i++) {
+            lastIterSol[i] = actualIteration[i];
+        }
+        iteration++;
+
+
+    }
+
+
+
+
+    return actualIteration;
+}
