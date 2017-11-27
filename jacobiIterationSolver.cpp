@@ -230,7 +230,7 @@ double* solveLaeWJacobiIterOfBlockMatrix(double valueOfLowMinDiag, double valOfU
     return actualIteration;
 }
 
-double* jacobiIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMinDiag,double valMainDiag, double valUpDiag,double valUpBlockDiag, int n, double f, double valBoundary) {
+double* jacobiIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMinDiag,double valMainDiag, double valUpDiag,double valUpBlockDiag, int n, double f, double valBoundary, int* numberOfIterations) {
 
     double* actualIteration=new double[n*n]();
     double* lastIterSol=new double[n*n]();
@@ -283,7 +283,7 @@ double* jacobiIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMin
             for(int i=0;i<n*n;i++) {
                 resi+=fabs(actualIteration[i]- lastIterSol[i]);
             }
-            std::cout << iteration <<": "<< resi<< std::endl;
+         //   std::cout << iteration <<": "<< resi<< std::endl;
         }
 
 
@@ -294,13 +294,12 @@ double* jacobiIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMin
 
 
     }
-
-
-
+    std::cout << "Calculation finished after "<<iteration<<" Iterations.(%"<<step<<")"<<std::endl;
+    *numberOfIterations=iteration;
 
     return actualIteration;
 }
-double* gaussSeidelIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMinDiag,double valMainDiag, double valUpDiag,double valUpBlockDiag, int n, double f, double valBoundary) {
+double* gaussSeidelIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMinDiag,double valMainDiag, double valUpDiag,double valUpBlockDiag, int n, double f, double valBoundary, int* numberOfIterations) {
 
     double* actualIteration=new double[n*n]();
     double* lastIterSol=new double[n*n]();
@@ -353,7 +352,7 @@ double* gaussSeidelIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valL
             for(int i=0;i<n*n;i++) {
                 resi+=fabs(actualIteration[i]- lastIterSol[i]);
             }
-            std::cout << iteration <<": "<< resi<< std::endl;
+          //     std::cout << iteration <<": "<< resi<< std::endl;
         }
 
 
@@ -364,9 +363,9 @@ double* gaussSeidelIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valL
 
 
     }
+    std::cout << "Calculation finished after "<<iteration<<" Iterations.(%"<<step<<")"<<std::endl;
 
-
-
+    *numberOfIterations=iteration;
 
     return actualIteration;
 }
