@@ -127,10 +127,6 @@ double* calculateDiffusion(bool centralDiff, bool jacobiIteration, int n, double
     if(saveToFile) {
         int index;
         ofstream myfile;
-
-        char *formattedNumber = new char[50];
-
-
         fileName << ".dat";
 
       //  std::cout << fileName.str() << endl;
@@ -139,19 +135,10 @@ double* calculateDiffusion(bool centralDiff, bool jacobiIteration, int n, double
         for (int k = 0; k < n; k++) {
             for (int i = 0; i < n; i++) {
                 index = k * n + i;
-
-                sprintf(formattedNumber, "%.10e", k * h);
-                myfile << formattedNumber << " ";
-
-                sprintf(formattedNumber, "%.10e", i * h);
-                myfile << formattedNumber << " ";
-
-
-                sprintf(formattedNumber, "%.10e", solutionVector[index]);
-                myfile << formattedNumber << " ";
-                myfile << "\n\n";
+                myfile<<k*h<<" "<<i*h<<" "<<solutionVector[index];
+                myfile << "\n";
             }
-
+            myfile << "\n";
         }
         myfile.close();
       std::cout<<"Results saved to "<<fileName.str()<<" ."<<std::endl;
