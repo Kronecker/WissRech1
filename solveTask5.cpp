@@ -28,7 +28,7 @@ void solveTask5() {
     f = 1;
     valBoundary = 0;
     vector<int> numPointsVec{25, 50, 100};
-    vector<double> vZeroVec = {50, 100};
+    vector<double> vZeroVec = {50, 100,200};
     executionData execData;
     centralDiff = true;
     saveToFile=true;
@@ -128,7 +128,7 @@ double* calculateDiffusion(bool centralDiff, bool jacobiIteration, int n, double
         int index;
         ofstream myfile;
 
-        char *formattedNumber = new char[20];
+        char *formattedNumber = new char[50];
 
 
         fileName << ".dat";
@@ -140,14 +140,14 @@ double* calculateDiffusion(bool centralDiff, bool jacobiIteration, int n, double
             for (int i = 0; i < n; i++) {
                 index = k * n + i;
 
-                sprintf(formattedNumber, "%.10lf", k * h);
+                sprintf(formattedNumber, "%.10e", k * h);
                 myfile << formattedNumber << " ";
 
-                sprintf(formattedNumber, "%.10lf", i * h);
+                sprintf(formattedNumber, "%.10e", i * h);
                 myfile << formattedNumber << " ";
 
 
-                sprintf(formattedNumber, "%.10lf", solutionVector[index]);
+                sprintf(formattedNumber, "%.10e", solutionVector[index]);
                 myfile << formattedNumber << " ";
                 myfile << "\n\n";
             }
