@@ -15,6 +15,7 @@
 using namespace std;
 
 double* calculateDiffusion(bool centralDiff, bool jacobiIteration, int n, double veloZero, double f, double valBoundary, bool saveToFile, executionData *execData) ;
+void buildAndSaveGnuPlotSkript(std::vector<executionData> execData,string fileName);
 
 void solveTask5() {
 
@@ -65,18 +66,19 @@ void solveTask5() {
         delete(solutionArrays[i]);
     }
 
+    std::cout<<"n\tdd\tv0\titera\ttime\tAlgo\tDiff"<<std::endl;
     for(std::vector<executionData>::size_type i = 0; i != overviewExecData.size(); i++) {
-        std::cout<<overviewExecData[i].samplePoints<<"\t"<<overviewExecData[i].veloZero<<"\t"<<overviewExecData[i].iterations<<"\t"<<overviewExecData[i].executionTimeMs<<"\t"<<overviewExecData[i].matrixMethod<<"\t"<<overviewExecData[i].diffMethod<<std::endl;
+        std::cout<<overviewExecData[i].samplePoints<<"\t"<<(overviewExecData[i].diagonalDomiant?"y":"n")<<"\t"<<overviewExecData[i].veloZero<<"\t"<<overviewExecData[i].iterations<<"\t"<<overviewExecData[i].executionTimeMs<<"\t"<<overviewExecData[i].matrixMethod<<"\t"<<overviewExecData[i].diffMethod<<std::endl;
     }
-
+    buildAndSaveGnuPlotSkript(overviewExecData,"gplotScript");
 }
 
 double* calculateDiffusion(bool centralDiff, bool jacobiIteration, int n, double veloZero, double f, double valBoundary, bool saveToFile, executionData *execData) {
 
     double *solutionVector;
     double h, hSquare, veloX, veloY, valLowBlockDiag, valLowMinDiag, valMainDiag, valUpDiag, valUpBlockDiag;
-    int numberOfIterations;
-
+    int numberOfIterations=0;
+    bool diagonalDominant;
 
 
     h = 1 / (double(n -1));
@@ -104,10 +106,10 @@ double* calculateDiffusion(bool centralDiff, bool jacobiIteration, int n, double
     auto start = std::chrono::high_resolution_clock::now();
     if (jacobiIteration) {
         solutionVector = jacobiIterOfBlockMatrixFourDiags(valLowBlockDiag, valLowMinDiag, valMainDiag, valUpDiag,
-                                                          valUpBlockDiag, n, f, valBoundary,&numberOfIterations);
+                                                          valUpBlockDiag, n, f, valBoundary,&numberOfIterations,&diagonalDominant);
     } else {
         solutionVector = gaussSeidelIterOfBlockMatrixFourDiags(valLowBlockDiag, valLowMinDiag, valMainDiag, valUpDiag,
-                                                               valUpBlockDiag, n, f, valBoundary,&numberOfIterations);
+                                                               valUpBlockDiag, n, f, valBoundary,&numberOfIterations,&diagonalDominant);
     }
     auto finish = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed=std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start);
@@ -122,7 +124,7 @@ double* calculateDiffusion(bool centralDiff, bool jacobiIteration, int n, double
     fileName << "_vo=" << std::setfill('0') << std::setw(3) << veloZero;
 
 
-    *execData={fileName.str(),elapsed.count()*1000,numberOfIterations,n,h,veloZero,(jacobiIteration ? "Jacobi" : "Gauss"),(centralDiff ? "Central" : "Upwind")};
+    *execData={fileName.str(),elapsed.count()*1000,numberOfIterations,n,h,veloZero,diagonalDominant,(jacobiIteration ? "Jacobi" : "Gauss"),(centralDiff ? "Central" : "Upwind")};
 
     if(saveToFile) {
         int index;
@@ -151,7 +153,22 @@ double* calculateDiffusion(bool centralDiff, bool jacobiIteration, int n, double
 }
 
 
+void buildAndSaveGnuPlotSkript(std::vector<executionData> execData,string fileName) {
 
+    ofstream myfile;
+
+    myfile.open(fileName+"win");
+    myfile<<"set pm3d"<<std::endl;
+
+
+    for(std::vector<executionData>::size_type i = 0; i != execData.size(); i++) {
+        myfile<<"set term wxt "<<(i+1)<<std::endl;
+        myfile<<"set title \"T5 n="<<execData[i].samplePoints<<" v0="<<execData[i].veloZero<<" "<<execData[i].matrixMethod<<" "<< execData[i].diffMethod<<(execData[i].diagonalDomiant?" diag dom ":" not diag dom ")<<"\""<<std::endl;
+        myfile<<"splot \""<<execData[i].name<<".dat\""<<std::endl;
+    }
+
+
+}
 
 
 

@@ -230,18 +230,25 @@ double* solveLaeWJacobiIterOfBlockMatrix(double valueOfLowMinDiag, double valOfU
     return actualIteration;
 }
 
-double* jacobiIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMinDiag,double valMainDiag, double valUpDiag,double valUpBlockDiag, int n, double f, double valBoundary, int* numberOfIterations) {
+double* jacobiIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMinDiag,double valMainDiag, double valUpDiag,double valUpBlockDiag, int n, double f, double valBoundary, int* numberOfIterations, bool* diagonalDominant) {
 
     double* actualIteration=new double[n*n]();
     double* lastIterSol=new double[n*n]();
-    int maxIter=7000;
+    int maxIter=9999;
     double tol=0.0001;
     int iteration=0;
     double resi=tol+1;
     int step=(maxIter / 100);
 
-    step =2;
 
+    step =2;
+    *diagonalDominant=fabs(valMainDiag)>=(fabs(valLowBlockDiag)+fabs(valLowMinDiag)+fabs(valUpDiag)+fabs(valUpBlockDiag));
+
+    if(*diagonalDominant) {
+        std::cout<<"Matrix is (weak) diagonal dominant"<<std::endl;
+    } else {
+        std::cout<<"Matrix is not diagonal dominant"<<std::endl;
+    }
     // boundary values init (outer)
     for(int i=0;i<n;i++) {
         actualIteration[i]=valBoundary;
@@ -299,17 +306,25 @@ double* jacobiIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMin
 
     return actualIteration;
 }
-double* gaussSeidelIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMinDiag,double valMainDiag, double valUpDiag,double valUpBlockDiag, int n, double f, double valBoundary, int* numberOfIterations) {
+double* gaussSeidelIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMinDiag,double valMainDiag, double valUpDiag,double valUpBlockDiag, int n, double f, double valBoundary, int* numberOfIterations, bool* diagonalDominant) {
 
     double* actualIteration=new double[n*n]();
     double* lastIterSol=new double[n*n]();
-    int maxIter=7000;
+    int maxIter=9999;
     double tol=0.0001;
     int iteration=0;
     double resi=tol+1;
     int step=(maxIter / 100);
 
+
     step =2;
+    *diagonalDominant=fabs(valMainDiag)>=(fabs(valLowBlockDiag)+fabs(valLowMinDiag)+fabs(valUpDiag)+fabs(valUpBlockDiag));
+
+    if(*diagonalDominant) {
+        std::cout<<"Matrix is (weak) diagonal dominant"<<std::endl;
+    } else {
+        std::cout<<"Matrix is not diagonal dominant"<<std::endl;
+    }
 
     // boundary values init (outer)
     for(int i=0;i<n;i++) {

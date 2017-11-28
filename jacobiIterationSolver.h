@@ -9,6 +9,6 @@ double* solveLaeWJacobiIterOfTridiagonalMatrix(double valueOFLowMinDiag, double 
 double* solveLaeWJacobiIterOfTridiagonalMatrixVariMainDiag(double valueOFLowMinDiag, double valOfUpMinDiag, double* valuesOfMainDiag, double h,int n, double* f);
 double* solveLaeWJacobiIterOfBlockMatrix(double valueOfLowMinDiag, double valOfUpMinDiag, double valueOfMainDiag,double valueOfLowBlockDia, double valueOfUpBlockDia, double h, int N, double** f);
 double* inversePowerIterationForTriDiagonalMatrix(double valueOfLowerDiag, double valueOfUpperDiag, double* valuesOfMainDiag, int n, double h);
-double* jacobiIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMinDiag,double valMainDiag, double valUpDiag,double valUpBlockDiag, int n, double f, double valBoundary, int* numberOfIterations);
-double* gaussSeidelIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMinDiag,double valMainDiag, double valUpDiag,double valUpBlockDiag, int n, double f, double valBoundary, int* numberOfIterations);
+double* jacobiIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMinDiag,double valMainDiag, double valUpDiag,double valUpBlockDiag, int n, double f, double valBoundary, int* numberOfIterations, bool* diagonalDominant);
+double* gaussSeidelIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMinDiag,double valMainDiag, double valUpDiag,double valUpBlockDiag, int n, double f, double valBoundary, int* numberOfIterations, bool* diagonalDominant);
 #endif //WISSRECH1_JACOBIITERATIONSOLVER_H

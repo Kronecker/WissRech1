@@ -13,6 +13,7 @@ struct executionData {
     int samplePoints;
     double h;
     double veloZero;
+    bool diagonalDomiant;
     std::string matrixMethod;
     std::string diffMethod;
 };
