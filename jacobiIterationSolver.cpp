@@ -239,10 +239,10 @@ double* jacobiIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valLowMin
     int iteration=0;
     double resi=tol+1;
     int step=(maxIter / 100);
-
+    double relativeTolerance=10000;
 
     step =2;
-    *diagonalDominant=fabs(valMainDiag)>=(fabs(valLowBlockDiag)+fabs(valLowMinDiag)+fabs(valUpDiag)+fabs(valUpBlockDiag));
+    *diagonalDominant=fabs(fabs(valMainDiag)-(fabs(valLowBlockDiag)+fabs(valLowMinDiag)+fabs(valUpDiag)+fabs(valUpBlockDiag)))<=fabs(valMainDiag)/relativeTolerance;
 
     if(*diagonalDominant) {
         std::cout<<"Matrix is (weak) diagonal dominant"<<std::endl;
@@ -315,10 +315,10 @@ double* gaussSeidelIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valL
     int iteration=0;
     double resi=tol+1;
     int step=(maxIter / 100);
-
+    double relativeTolerance=10000;
 
     step =2;
-    *diagonalDominant=fabs(valMainDiag)>=(fabs(valLowBlockDiag)+fabs(valLowMinDiag)+fabs(valUpDiag)+fabs(valUpBlockDiag));
+    *diagonalDominant=fabs(fabs(valMainDiag)-(fabs(valLowBlockDiag)+fabs(valLowMinDiag)+fabs(valUpDiag)+fabs(valUpBlockDiag)))<=fabs(valMainDiag)/relativeTolerance;
 
     if(*diagonalDominant) {
         std::cout<<"Matrix is (weak) diagonal dominant"<<std::endl;
