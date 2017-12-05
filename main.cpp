@@ -9,7 +9,7 @@ int main() {
     //solveTask3();
     //solveTask4();
 
-    solveTask5();
-
+    //solveTask5();
+    solveTask6();
     return 0;
 }
