@@ -10,8 +10,9 @@ int main() {
     //solveTask4();
 
     //solveTask5();
-    solveTask6();
+    //solveTask6();
     std::cout<<std::endl<<std::endl;
-    solveTask7();
+    //solveTask7();
+    solveTask8();
     return 0;
 }
