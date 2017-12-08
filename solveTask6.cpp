@@ -30,7 +30,7 @@ void solveTask6() {
     vec_a=(float*)ptr;
     memAlignOS(&ptr,16,(size_t) 4*n);
     vec_b=(float*)ptr;
-    memAlignOS(&ptr,16,(size_t) 2);
+    memAlignOS(&ptr,16,(size_t) 16);
     result=(float*)ptr;
 
     for(int i=0;i<n;i++) {
@@ -49,7 +49,7 @@ void solveTask6() {
         }
 
         c = _mm_hadd_ps(_mm_hadd_ps(c, c),c);
-        _mm_store_ps(result, c);
+        _mm_store_ps1(result, c);
     }
     auto finish = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed=std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start);

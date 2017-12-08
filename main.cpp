@@ -11,5 +11,7 @@ int main() {
 
     //solveTask5();
     solveTask6();
+    std::cout<<std::endl<<std::endl;
+    solveTask7();
     return 0;
 }
