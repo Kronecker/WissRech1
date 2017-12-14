@@ -428,7 +428,7 @@ float* jacobiIterOfBlockMatrixFourDiagsFloatSIMD(float valLowBlockDiag,float val
         // already done above
 
 
-        // consecutive blocks   
+        // consecutive blocks
 
         for(int k=1;k<nm1;k++) { // iterate through blocks
 
