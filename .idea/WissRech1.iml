@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/mUtil.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jacobiIterationSolver.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/memAlignOS.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/solveTask9.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/solveTask8.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/solveTask7.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/solveTask6.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/solveTask5.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inverseIterationMethods.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/solveTask3.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/solveTask4.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/solveTask0.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/executionData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mUtil.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/memAlignOS.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/solveTasks.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jacobiIterationSolver.cpp" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Header Search Paths">
+        <CLASSES>
+          <root url="file://C:/MinGW/64/lib/gcc/x86_64-w64-mingw32/5.1.0/include" />
+          <root url="file://C:/MinGW/64/lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed" />
+          <root url="file://C:/MinGW/64/x86_64-w64-mingw32/include" />
+          <root url="file://C:/MinGW/64/include" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://C:/MinGW/64/lib/gcc/x86_64-w64-mingw32/5.1.0/include" />
+          <root url="file://C:/MinGW/64/lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed" />
+          <root url="file://C:/MinGW/64/x86_64-w64-mingw32/include" />
+          <root url="file://C:/MinGW/64/include" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>
