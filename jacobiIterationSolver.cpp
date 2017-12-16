@@ -3,8 +3,10 @@
 //
 
 #include "jacobiIterationSolver.h"
+#include "memAlignOS.h"
 #include <iostream>
 #include <math.h>
+#include <xmmintrin.h>
 
 
 double* solveLaeWJacobiIterOfTridiagonalMatrix(double valueOFLowMinDiag, double valOfUpMinDiag, double valueOfMainDiag,double solBoundLow, double solBoundHigh, double h, int N, double* f) {
@@ -387,36 +389,45 @@ double* gaussSeidelIterOfBlockMatrixFourDiags(double valLowBlockDiag,double valL
 
 float* jacobiIterOfBlockMatrixFourDiagsFloatSIMD(float valLowBlockDiag,float valLowMinDiag,float valMainDiag, float valUpDiag,float valUpBlockDiag, int n, float f, float valBoundary, int* numberOfIterations, bool* diagonalDominant) {
 
-    float* actualIteration=new float[n*n]();
-    float* lastIterSol=new float[n*n]();
+    n=1024;
+    float *actualIteration, *lastIterSol, *lowItaDy, *upItaDy, *temp;
+    memAlignOS((void**) &actualIteration, 16,4*n*n);
+    memAlignOS((void**) &lastIterSol, 16,4*n*n);
+    memAlignOS((void**) &lowItaDy, 16,16);
+    memAlignOS((void**) &upItaDy, 16,16);
+
+    __m128 centralUSIMD,lowDiagUSIMD,upDiagUSIMD, lowBlockUSIMD, upBlockUSIMD,valLowBlockDiagSIMD, valLowMinDiagSIMD, valMainDiagInvertSIMD, valUpDiagSIMD, valUpBlockDiagSIMD, fSIMD;
+
     int maxIter=9999;
     float tol=0.0001;
     int iteration=0;
     float resi=tol+1;
-    int step=(maxIter / 100);
+    int step=(maxIter / 100);step =2;
     float relativeTolerance=10000;
 
-    step =2;
     *diagonalDominant=fabs(fabs(valMainDiag)-(fabs(valLowBlockDiag)+fabs(valLowMinDiag)+fabs(valUpDiag)+fabs(valUpBlockDiag)))<=fabs(valMainDiag)/relativeTolerance;
+
+    // Store maatrix into SIMD vectors, lowItaDy is used as dummy variable
+    lowItaDy[0]=lowItaDy[1]=lowItaDy[2]=lowItaDy[3]=valLowBlockDiag;
+    valLowBlockDiagSIMD=_mm_load_ps(lowItaDy);
+    lowItaDy[0]=lowItaDy[1]=lowItaDy[2]=lowItaDy[3]=valLowMinDiag;
+    valLowMinDiagSIMD=_mm_load_ps(lowItaDy);
+    lowItaDy[0]=lowItaDy[1]=lowItaDy[2]=lowItaDy[3]=1/valMainDiag;
+    valMainDiagInvertSIMD=_mm_load_ps(lowItaDy);
+    lowItaDy[0]=lowItaDy[1]=lowItaDy[2]=lowItaDy[3]=valUpDiag;
+    valUpDiagSIMD=_mm_load_ps(lowItaDy);
+    lowItaDy[0]=lowItaDy[1]=lowItaDy[2]=lowItaDy[3]=valUpBlockDiag;
+    valUpBlockDiagSIMD=_mm_load_ps(lowItaDy);
+    lowItaDy[0]=lowItaDy[1]=lowItaDy[2]=lowItaDy[3]=f;
+    fSIMD=_mm_load_ps(lowItaDy);
+
 
     if(*diagonalDominant) {
         std::cout<<"Matrix is (weak) diagonal dominant"<<std::endl;
     } else {
         std::cout<<"Matrix is not diagonal dominant"<<std::endl;
     }
-    // boundary values init (outer)
-    for(int i=0;i<n;i++) {
-        actualIteration[i]=valBoundary;
-        lastIterSol[i]=valBoundary;
-        actualIteration[n*(n-1)+i]=valBoundary;
-        lastIterSol[n*(n-1)+i]=valBoundary;
-    }
-    for(int k=1;k<n-1;k++) { // iterate through blocks
-        actualIteration[k*n]=valBoundary;
-        lastIterSol[k*n]=valBoundary;
-        actualIteration[(k+1)*n-1]=valBoundary;
-        lastIterSol[(k+1)*n-1]=valBoundary;
-    }
+
 
     int nm1=n-1;
     int index;
@@ -427,7 +438,7 @@ float* jacobiIterOfBlockMatrixFourDiagsFloatSIMD(float valLowBlockDiag,float val
         // last block = boundary with u=max
         // already done above
 
-
+// #ToBeContinued
         // consecutive blocks
 
         for(int k=1;k<nm1;k++) { // iterate through blocks
@@ -449,9 +460,9 @@ float* jacobiIterOfBlockMatrixFourDiagsFloatSIMD(float valLowBlockDiag,float val
         }
 
 
-        for (int i = 0; i < n*n; i++) {
-            lastIterSol[i] = actualIteration[i];
-        }
+        temp=lastIterSol;  // #swap actualIteration and lastIterSol
+        lastIterSol=actualIteration;
+        actualIteration=temp;
         iteration++;
 
 
@@ -459,7 +470,12 @@ float* jacobiIterOfBlockMatrixFourDiagsFloatSIMD(float valLowBlockDiag,float val
     std::cout << "Calculation finished after "<<iteration<<" Iterations.(%"<<step<<")"<<std::endl;
     *numberOfIterations=iteration;
 
-    return actualIteration;
+    freeAlignedMemOS(actualIteration);
+    freeAlignedMemOS(lastIterSol);
+    freeAlignedMemOS(lowItaDy);
+    freeAlignedMemOS(upItaDy);
+
+    return lastIterSol;   // lastIterSol isntead of actual is returned, to account for swapping of Vectors at the end of while loop (#swap)
 }
 
 
@@ -536,6 +552,9 @@ float* jacobiIterOfBlockMatrixFourDiags(float valLowBlockDiag,float valLowMinDia
     }
     std::cout << "Calculation finished after "<<iteration<<" Iterations.(%"<<step<<")"<<std::endl;
     *numberOfIterations=iteration;
+
+
+
 
     return actualIteration;
 }
