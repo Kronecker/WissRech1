@@ -14,10 +14,9 @@ using namespace std;
 
 
 void solveTask6() {
-
+std::cout<<"Task 6"<<std::endl;
     int n=5000, blocks;
-    int numOfIta=100000;
-    void* ptr=NULL;
+    int numOfIta=10000;
     float *vec_a, *vec_b, *result;
     float resultDirect;
     __m128 a,b,c;
@@ -26,12 +25,12 @@ void solveTask6() {
     }
     std::cout<<"n = "<<n<<std::endl;
 
-    memAlignOS(&ptr,16,(size_t) 4*n);
-    vec_a=(float*)ptr;
-    memAlignOS(&ptr,16,(size_t) 4*n);
-    vec_b=(float*)ptr;
-    memAlignOS(&ptr,16,(size_t) 16);
-    result=(float*)ptr;
+    memAlignOS((void**) &vec_a,16,(size_t) 4*n);
+
+    memAlignOS((void**)&vec_b,16,(size_t) 4*n);
+
+    memAlignOS((void**) &result,16,(size_t) 16);
+
 
     for(int i=0;i<n;i++) {
         vec_a[i]=(i+1);
@@ -53,7 +52,7 @@ void solveTask6() {
     }
     auto finish = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed=std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start);
-    std::cout<<(elapsed.count()*1000)/numOfIta<<std::endl;
+    std::cout<<"SIMD: "<<(elapsed.count()*1000)/numOfIta<<"ms"<<std::endl;
 
 
 
@@ -66,11 +65,7 @@ void solveTask6() {
     }
     finish = std::chrono::high_resolution_clock::now();
     elapsed=std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start);
-    std::cout<<(elapsed.count()*1000)/numOfIta<<std::endl;
-
-    std::cout<<*result<<" "<<resultDirect<<" "<<fabs(*result-resultDirect)/resultDirect<<std::endl;
-
-
+    std::cout<<"Std: "<<(elapsed.count()*1000)/numOfIta<<"ms"<<std::endl;
 
     freeAlignedMemOS(vec_a);
     freeAlignedMemOS(vec_b);

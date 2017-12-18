@@ -5,6 +5,8 @@
 #ifndef WISSRECH1_MUTIL_H
 #define WISSRECH1_MUTIL_H
 
+float subtractAndSumVectorsAligned16(float *vec_a,float *vec_b, int n);
+
 double *linspace(double start, double end, int n);
 
 double *

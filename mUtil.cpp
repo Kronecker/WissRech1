@@ -4,6 +4,45 @@
 
 #include "mUtil.h"
 #include <iostream>
+#include <xmmintrin.h>
+#include <pmmintrin.h>
+#include "memAlignOS.h"
+
+
+float subtractAndSumVectorsAligned16(float *vec_a,float *vec_b, int n) {
+
+    int blocks;
+    float  *result;
+    memAlignOS((void**) &result,16,(size_t) 16);
+    float resultDirect;
+    __m128 a, b, c, diff, zero, signMask;
+    if ((n % 4)) {
+        n = (n / 4) * 4; //floor to multiple of 4
+    }
+    std::cout << "n = " << n << std::endl;
+
+    c = _mm_setzero_ps();
+    zero=_mm_setzero_ps();
+
+    blocks = n / 4;
+    for (int i = 0; i < blocks; i++) {
+        a = _mm_load_ps(&(vec_a[i * 4]));
+        b = _mm_load_ps(&(vec_b[i * 4]));
+        diff=_mm_sub_ps(a, b);
+        signMask=_mm_cmplt_ps(diff, zero);
+        diff=_mm_sub_ps(_mm_andnot_ps(signMask,diff),_mm_and_ps(signMask,diff));
+        c = _mm_add_ps(c,diff);
+    }
+
+    c = _mm_hadd_ps(_mm_hadd_ps(c, c), c);
+    _mm_store_ps1(result, c);
+    resultDirect=result[0];
+    freeAlignedMemOS(result);
+    return resultDirect;
+}
+
+
+
 
 
 double *linspace(double start, double end, int n) {

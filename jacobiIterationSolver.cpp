@@ -429,27 +429,33 @@ float* jacobiIterOfBlockMatrixFourDiagsFloatSIMD(float valLowBlockDiag,float val
     }
 
 
-    int nm1=n-1;
+    int nm1=n-2;
     int index;
     while(iteration<maxIter&&resi>tol) {
-
+/*
         // first block = boundary with u=0
-        // already done above
-        // last block = boundary with u=max
-        // already done above
+        for(int i=1;i<nm1;i+=4) {  // iterate in block
+            index=k*n+i;
+            actualIteration[index]=1/valMainDiag*(f-valLowBlockDiag*lastIterSol[index-n]-valLowMinDiag*lastIterSol[index-1]-valUpDiag*lastIterSol[index+1]-valUpBlockDiag*lastIterSol[index+n]);
 
-// #ToBeContinued
+        }
         // consecutive blocks
+        for(int k=2;k<nm1;k++) { // iterate through blocks
 
-        for(int k=1;k<nm1;k++) { // iterate through blocks
-
-            for(int i=1;i<nm1;i++) {  // iterate in block
+            for(int i=1;i<nm1;i+=4) {  // iterate in block
                 index=k*n+i;
                 actualIteration[index]=1/valMainDiag*(f-valLowBlockDiag*lastIterSol[index-n]-valLowMinDiag*lastIterSol[index-1]-valUpDiag*lastIterSol[index+1]-valUpBlockDiag*lastIterSol[index+n]);
+
             }
 
         }
 
+        // last block = boundary with u=max
+        for(int i=1;i<nm1;i+=4) {  // iterate in block
+            index=k*n+i;
+            actualIteration[index]=1/valMainDiag*(f-valLowBlockDiag*lastIterSol[index-n]-valLowMinDiag*lastIterSol[index-1]-valUpDiag*lastIterSol[index+1]-valUpBlockDiag*lastIterSol[index+n]);
+
+        }
 
         if (!(iteration % step)) {
             resi=0;
@@ -459,7 +465,7 @@ float* jacobiIterOfBlockMatrixFourDiagsFloatSIMD(float valLowBlockDiag,float val
             //   std::cout << iteration <<": "<< resi<< std::endl;
         }
 
-
+*/
         temp=lastIterSol;  // #swap actualIteration and lastIterSol
         lastIterSol=actualIteration;
         actualIteration=temp;

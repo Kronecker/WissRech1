@@ -10,9 +10,7 @@ using namespace std;
 float* smdNewtonReciprocalFourVals(float *a);
 float* smdNewtonSqrtRcFourVals(float *a);
 void solveTask7() {
-
-
-
+std::cout<<"Task 7"<<std::endl;
 
     float *a=new float[4];
     a[0]=1;
@@ -20,12 +18,9 @@ void solveTask7() {
     a[2]=2;
     a[3]=4;
 
+    std::cout<<"x: "<<a[0]<<" "<<a[1]<<" "<<a[2]<<" "<<a[3]<<std::endl<<std::endl;
     smdNewtonReciprocalFourVals(a);
-    std::cout<<std::endl;
     smdNewtonSqrtRcFourVals(a);
-
-
-
 
     delete(a);
 };
@@ -48,16 +43,13 @@ float* smdNewtonReciprocalFourVals(float *a) {
     yvalsSMD= _mm_rcp_ps (xvalSMD);
     _mm_store_ps(result, yvalsSMD);
 
-    std::cout<<result[0]<<" "<<result[1]<<" "<<result[2]<<" "<<result[3]<<" "<<std::endl;
-    std::cout<<(result[0]-1/a[0])<<" "<<(result[1]-1/a[1])<<" "<<(result[2]-1/a[2])<<" "<<(result[3]-1/a[3])<<" "<<std::endl;
-
     for(int i=0;i<iterations;i++) {
         yvalsSMD = _mm_mul_ps(yvalsSMD, _mm_sub_ps(tempTwoSMD, _mm_mul_ps(xvalSMD, yvalsSMD)));
     }
 
     _mm_store_ps(result, yvalsSMD);
-    std::cout<<result[0]<<" "<<result[1]<<" "<<result[2]<<" "<<result[3]<<" "<<std::endl;
-    std::cout<<(result[0]-1/a[0])<<" "<<(result[1]-1/a[1])<<" "<<(result[2]-1/a[2])<<" "<<(result[3]-1/a[3])<<" "<<std::endl;
+    std::cout<<"1/x: "<<result[0]<<" "<<result[1]<<" "<<result[2]<<" "<<result[3]<<" "<<std::endl;
+    std::cout<<"resi: "<<(result[0]-1/a[0])<<" "<<(result[1]-1/a[1])<<" "<<(result[2]-1/a[2])<<" "<<(result[3]-1/a[3])<<" "<<std::endl;
 
     freeAlignedMemOS(xvals);freeAlignedMemOS(tempTwo);
     return result;
@@ -82,16 +74,13 @@ float* smdNewtonSqrtRcFourVals(float *a) {
     yvalsSMD= _mm_rsqrt_ps (xvalSMD);
     _mm_store_ps(result, yvalsSMD);
 
-    std::cout<<result[0]<<" "<<result[1]<<" "<<result[2]<<" "<<result[3]<<" "<<std::endl;
-    std::cout<<(result[0]-1/sqrt(a[0]))<<" "<<(result[1]-1/sqrt(a[1]))<<" "<<(result[2]-1/sqrt(a[2]))<<" "<<(result[3]-1/sqrt(a[3]))<<" "<<std::endl;
-
     for(int i=0;i<iterations;i++) {
         yvalsSMD = _mm_mul_ps(yvalsSMD,_mm_sub_ps(tempThreeHalfSMD, _mm_mul_ps(_mm_mul_ps(tempOneHalfSMD,xvalSMD),_mm_mul_ps(yvalsSMD,yvalsSMD))));
     }
 
     _mm_store_ps(result, yvalsSMD);
-    std::cout<<result[0]<<" "<<result[1]<<" "<<result[2]<<" "<<result[3]<<" "<<std::endl;
-    std::cout<<(result[0]-1/sqrt(a[0]))<<" "<<(result[1]-1/sqrt(a[1]))<<" "<<(result[2]-1/sqrt(a[2]))<<" "<<(result[3]-1/sqrt(a[3]))<<" "<<std::endl;
+    std::cout<<"1/sqrt(x): "<<result[0]<<" "<<result[1]<<" "<<result[2]<<" "<<result[3]<<" "<<std::endl;
+    std::cout<<"resi: "<<(result[0]-1/sqrt(a[0]))<<" "<<(result[1]-1/sqrt(a[1]))<<" "<<(result[2]-1/sqrt(a[2]))<<" "<<(result[3]-1/sqrt(a[3]))<<" "<<std::endl;
 
 
     freeAlignedMemOS(xvals);freeAlignedMemOS(tempOneHalf);freeAlignedMemOS(tempThreeHalf);

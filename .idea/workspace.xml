@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" assignedExecutableTargets="true" buildAllGenerated="true">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
       <config projectName="WissRech1" targetName="WissRech1" />
     </generated>
   </component>
-  <component name="CMakeSettings" AUTO_RELOAD="false" GENERATION_PASS_SYSTEM_ENVIRONMENT="true">
-    <ADDITIONAL_GENERATION_ENVIRONMENT>
-      <envs />
-    </ADDITIONAL_GENERATION_ENVIRONMENT>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration CONFIG_NAME="Debug" />
+    </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4d96824-6edc-448d-afa7-9d35641b622d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/WissRech1.iml" afterPath="$PROJECT_DIR$/.idea/WissRech1.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jacobiIterationSolver.cpp" afterPath="$PROJECT_DIR$/jacobiIterationSolver.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mUtil.cpp" afterPath="$PROJECT_DIR$/mUtil.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mUtil.h" afterPath="$PROJECT_DIR$/mUtil.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solveTask6.cpp" afterPath="$PROJECT_DIR$/solveTask6.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solveTask7.cpp" afterPath="$PROJECT_DIR$/solveTask7.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solveTask8.cpp" afterPath="$PROJECT_DIR$/solveTask8.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solveTask9.cpp" afterPath="$PROJECT_DIR$/solveTask9.cpp" />
     </list>
     <ignored path="M:\Uni\WissRech1\.idea\shelf/" />
+    <ignored path="$PROJECT_DIR$/.idea/shelf/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,32 +36,22 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="WissRech1" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="solveTask8.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="solveTask8.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-297">
-              <caret line="166" column="65" selection-start-line="166" selection-start-column="65" selection-end-line="166" selection-end-column="65" />
+            <state relative-caret-position="425">
+              <caret line="137" column="54" lean-forward="true" selection-start-line="137" selection-start-column="54" selection-end-line="137" selection-end-column="54" />
               <folding>
-                <element signature="e#45#64#0" expanded="true" />
-                <element signature="e#2864#4382#0" expanded="false" />
-                <element signature="e#4384#5983#0" expanded="false" />
+                <element signature="e#3892#4002#0" expanded="false" />
+                <element signature="e#4409#6123#0" expanded="false" />
+                <element signature="e#6125#7659#0" expanded="false" />
+                <element signature="e#7661#9260#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="memAlignOS.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/memAlignOS.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="21" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -60,18 +59,20 @@
       <file leaf-file-name="solveTask9.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="113" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
-              <folding />
+            <state relative-caret-position="342">
+              <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+              <folding>
+                <element signature="e#45#68#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jacobiIterationSolver.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jacobiIterationSolver.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="440" column="17" selection-start-line="440" selection-start-column="17" selection-end-line="440" selection-end-column="17" />
+            <state relative-caret-position="353">
+              <caret line="467" column="2" lean-forward="false" selection-start-line="467" selection-start-column="2" selection-end-line="467" selection-end-column="2" />
               <folding>
                 <element signature="e#45#79#0" expanded="true" />
                 <element signature="e#167#1755#0" expanded="false" />
@@ -83,21 +84,67 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mUtil.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mUtil.cpp">
+      <file leaf-file-name="solveTask6.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solveTask6.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-663">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="465">
+              <caret line="67" column="73" lean-forward="false" selection-start-line="67" selection-start-column="73" selection-end-line="67" selection-end-column="73" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jacobiIterationSolver.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.h">
+      <file leaf-file-name="solveTask7.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solveTask7.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="223" selection-start-line="12" selection-start-column="223" selection-end-line="12" selection-end-column="223" />
+            <state relative-caret-position="-151">
+              <caret line="57" column="4" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="solveTask5.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solveTask5.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="871">
+              <caret line="115" column="59" lean-forward="false" selection-start-line="115" selection-start-column="3" selection-end-line="115" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mUtil.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mUtil.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="32" column="64" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="64" />
+              <folding>
+                <element signature="e#40#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mUtil.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mUtil.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="71" lean-forward="false" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -112,10 +159,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/jacobiIterationSolver.h" />
-        <option value="$PROJECT_DIR$/solveTask9.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/solveTask8.cpp" />
+        <option value="$PROJECT_DIR$/mUtil.h" />
         <option value="$PROJECT_DIR$/jacobiIterationSolver.cpp" />
+        <option value="$PROJECT_DIR$/solveTask9.cpp" />
+        <option value="$PROJECT_DIR$/mUtil.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/solveTask6.cpp" />
+        <option value="$PROJECT_DIR$/solveTask7.cpp" />
+        <option value="$PROJECT_DIR$/solveTask8.cpp" />
       </list>
     </option>
   </component>
@@ -125,21 +177,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="80" />
-    <option name="y" value="-8" />
-    <option name="width" value="1608" />
-    <option name="height" value="1066" />
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="75" />
+    <option name="y" value="6" />
+    <option name="width" value="1851" />
+    <option name="height" value="1068" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -158,22 +204,13 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WissRech1" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WissRech1" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WissRech1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="WissRech1" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="WissRech1" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
     </panes>
@@ -181,14 +218,38 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="Application.WissRech1">
-    <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WissRech1" TARGET_NAME="WissRech1" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WissRech1" TARGET_NAME="WissRech1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WissRech1" RUN_TARGET_NAME="WissRech1">
       <envs />
-      <method />
+    </configuration>
+    <configuration name="WissRech1" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WissRech1" TARGET_NAME="WissRech1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WissRech1" RUN_TARGET_NAME="WissRech1">
+      <envs />
     </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WissRech1" TARGET_NAME="WissRech1" CONFIG_NAME="Debug">
       <envs />
-      <method />
+    </configuration>
+    <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WissRech1" TARGET_NAME="WissRech1" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
@@ -220,15 +281,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="WissRech1" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -343,14 +395,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="WissRech1" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WissRech1" TARGET_NAME="WissRech1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WissRech1" RUN_TARGET_NAME="WissRech1">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WissRech1" TARGET_NAME="WissRech1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WissRech1" RUN_TARGET_NAME="WissRech1">
-      <envs />
-      <method />
-    </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.WissRech1" />
       <item index="1" class="java.lang.String" itemvalue="Application.Build All" />
@@ -427,28 +471,32 @@
     <option name="totallyTimeSpent" value="21867000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="-8" width="1608" height="1066" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13638814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822084" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3322884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31697342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39916405" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.398773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -474,34 +522,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/solveTask5.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="115" column="59" selection-start-line="115" selection-start-column="3" selection-end-line="115" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solveTask6.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="58" selection-start-line="53" selection-start-column="3" selection-end-line="55" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/memAlignOS.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="21" />
+          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -509,23 +533,24 @@
     <entry file="file://$PROJECT_DIR$/memAlignOS.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="113" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
-          <folding />
+          <caret line="15" column="113" lean-forward="false" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
+          <folding>
+            <element signature="e#45#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7310">
-          <caret line="430" column="29" selection-start-line="430" selection-start-column="29" selection-end-line="430" selection-end-column="29" />
+          <caret line="430" column="29" lean-forward="false" selection-start-line="430" selection-start-column="29" selection-end-line="430" selection-end-column="29" />
           <folding>
             <element signature="e#45#79#0" expanded="true" />
             <element signature="e#167#1755#0" expanded="false" />
@@ -539,7 +564,7 @@
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="223" selection-start-line="12" selection-start-column="223" selection-end-line="12" selection-end-column="223" />
+          <caret line="12" column="223" lean-forward="false" selection-start-line="12" selection-start-column="223" selection-end-line="12" selection-end-column="223" />
           <folding />
         </state>
       </provider>
@@ -547,11 +572,12 @@
     <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#45#64#0" expanded="true" />
-            <element signature="e#2864#4382#0" expanded="false" />
-            <element signature="e#4384#5983#0" expanded="false" />
+            <element signature="e#3892#4002#0" expanded="false" />
+            <element signature="e#4409#6123#0" expanded="false" />
+            <element signature="e#6125#7659#0" expanded="false" />
+            <element signature="e#7661#9260#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -559,7 +585,7 @@
     <entry file="file://$PROJECT_DIR$/solveTask5.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1955">
-          <caret line="115" column="59" selection-start-line="115" selection-start-column="3" selection-end-line="115" selection-end-column="59" />
+          <caret line="115" column="59" lean-forward="false" selection-start-line="115" selection-start-column="3" selection-end-line="115" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -567,23 +593,21 @@
     <entry file="file://$PROJECT_DIR$/solveTask6.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
-          <caret line="55" column="58" selection-start-line="53" selection-start-column="3" selection-end-line="55" selection-end-column="58" />
-          <folding />
+          <caret line="55" column="58" lean-forward="false" selection-start-line="53" selection-start-column="3" selection-end-line="55" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/memAlignOS.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="21" />
+          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -591,23 +615,24 @@
     <entry file="file://$PROJECT_DIR$/memAlignOS.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="113" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
-          <folding />
+          <caret line="15" column="113" lean-forward="false" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
+          <folding>
+            <element signature="e#45#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7310">
-          <caret line="430" column="29" selection-start-line="430" selection-start-column="29" selection-end-line="430" selection-end-column="29" />
+          <caret line="430" column="29" lean-forward="false" selection-start-line="430" selection-start-column="29" selection-end-line="430" selection-end-column="29" />
           <folding>
             <element signature="e#45#79#0" expanded="true" />
             <element signature="e#167#1755#0" expanded="false" />
@@ -621,7 +646,7 @@
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="223" selection-start-line="12" selection-start-column="223" selection-end-line="12" selection-end-column="223" />
+          <caret line="12" column="223" lean-forward="false" selection-start-line="12" selection-start-column="223" selection-end-line="12" selection-end-column="223" />
           <folding />
         </state>
       </provider>
@@ -629,11 +654,12 @@
     <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#45#64#0" expanded="true" />
-            <element signature="e#2864#4382#0" expanded="false" />
-            <element signature="e#4384#5983#0" expanded="false" />
+            <element signature="e#3892#4002#0" expanded="false" />
+            <element signature="e#4409#6123#0" expanded="false" />
+            <element signature="e#6125#7659#0" expanded="false" />
+            <element signature="e#7661#9260#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -641,7 +667,7 @@
     <entry file="file://$PROJECT_DIR$/memAlignOS.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -649,23 +675,24 @@
     <entry file="file://$PROJECT_DIR$/memAlignOS.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="113" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
-          <folding />
+          <caret line="15" column="113" lean-forward="false" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
+          <folding>
+            <element signature="e#45#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7310">
-          <caret line="430" column="29" selection-start-line="430" selection-start-column="29" selection-end-line="430" selection-end-column="29" />
+          <caret line="430" column="29" lean-forward="false" selection-start-line="430" selection-start-column="29" selection-end-line="430" selection-end-column="29" />
           <folding>
             <element signature="e#45#79#0" expanded="true" />
             <element signature="e#167#1755#0" expanded="false" />
@@ -679,7 +706,7 @@
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="223" selection-start-line="12" selection-start-column="223" selection-end-line="12" selection-end-column="223" />
+          <caret line="12" column="223" lean-forward="false" selection-start-line="12" selection-start-column="223" selection-end-line="12" selection-end-column="223" />
           <folding />
         </state>
       </provider>
@@ -687,11 +714,12 @@
     <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#45#64#0" expanded="true" />
-            <element signature="e#2864#4382#0" expanded="false" />
-            <element signature="e#4384#5983#0" expanded="false" />
+            <element signature="e#3892#4002#0" expanded="false" />
+            <element signature="e#4409#6123#0" expanded="false" />
+            <element signature="e#6125#7659#0" expanded="false" />
+            <element signature="e#7661#9260#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -699,15 +727,17 @@
     <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="113" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
-          <folding />
+          <caret line="15" column="113" lean-forward="false" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
+          <folding>
+            <element signature="e#45#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7310">
-          <caret line="430" column="29" selection-start-line="430" selection-start-column="29" selection-end-line="430" selection-end-column="29" />
+          <caret line="430" column="29" lean-forward="false" selection-start-line="430" selection-start-column="29" selection-end-line="430" selection-end-column="29" />
           <folding>
             <element signature="e#45#79#0" expanded="true" />
             <element signature="e#167#1755#0" expanded="false" />
@@ -721,7 +751,7 @@
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="223" selection-start-line="12" selection-start-column="223" selection-end-line="12" selection-end-column="223" />
+          <caret line="12" column="223" lean-forward="false" selection-start-line="12" selection-start-column="223" selection-end-line="12" selection-end-column="223" />
           <folding />
         </state>
       </provider>
@@ -729,11 +759,12 @@
     <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding>
-            <element signature="e#45#64#0" expanded="true" />
-            <element signature="e#2864#4382#0" expanded="false" />
-            <element signature="e#4384#5983#0" expanded="false" />
+            <element signature="e#3892#4002#0" expanded="false" />
+            <element signature="e#4409#6123#0" expanded="false" />
+            <element signature="e#6125#7659#0" expanded="false" />
+            <element signature="e#7661#9260#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -741,15 +772,17 @@
     <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#45#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7956">
-          <caret line="468" column="40" selection-start-line="468" selection-start-column="40" selection-end-line="468" selection-end-column="40" />
+          <caret line="468" column="40" lean-forward="false" selection-start-line="468" selection-start-column="40" selection-end-line="468" selection-end-column="40" />
           <folding>
             <element signature="e#45#79#0" expanded="true" />
             <element signature="e#167#1755#0" expanded="false" />
@@ -763,7 +796,7 @@
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="223" selection-start-line="12" selection-start-column="223" selection-end-line="12" selection-end-column="223" />
+          <caret line="12" column="223" lean-forward="false" selection-start-line="12" selection-start-column="223" selection-end-line="12" selection-end-column="223" />
           <folding />
         </state>
       </provider>
@@ -771,11 +804,12 @@
     <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding>
-            <element signature="e#45#64#0" expanded="true" />
-            <element signature="e#2864#4382#0" expanded="false" />
-            <element signature="e#4384#5983#0" expanded="false" />
+            <element signature="e#3892#4002#0" expanded="false" />
+            <element signature="e#4409#6123#0" expanded="false" />
+            <element signature="e#6125#7659#0" expanded="false" />
+            <element signature="e#7661#9260#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -783,15 +817,17 @@
     <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
+          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <folding>
+            <element signature="e#45#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#45#79#0" expanded="true" />
             <element signature="e#167#1755#0" expanded="false" />
@@ -805,11 +841,12 @@
     <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding>
-            <element signature="e#45#64#0" expanded="true" />
-            <element signature="e#2864#4382#0" expanded="false" />
-            <element signature="e#4384#5983#0" expanded="false" />
+            <element signature="e#3892#4002#0" expanded="false" />
+            <element signature="e#4409#6123#0" expanded="false" />
+            <element signature="e#6125#7659#0" expanded="false" />
+            <element signature="e#7661#9260#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -817,19 +854,22 @@
     <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#45#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding>
-            <element signature="e#45#64#0" expanded="true" />
-            <element signature="e#2864#4382#0" expanded="false" />
-            <element signature="e#4384#5983#0" expanded="false" />
+            <element signature="e#3892#4002#0" expanded="false" />
+            <element signature="e#4409#6123#0" expanded="false" />
+            <element signature="e#6125#7659#0" expanded="false" />
+            <element signature="e#7661#9260#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -837,19 +877,22 @@
     <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#45#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding>
-            <element signature="e#45#64#0" expanded="true" />
-            <element signature="e#2864#4382#0" expanded="false" />
-            <element signature="e#4384#5983#0" expanded="false" />
+            <element signature="e#3892#4002#0" expanded="false" />
+            <element signature="e#4409#6123#0" expanded="false" />
+            <element signature="e#6125#7659#0" expanded="false" />
+            <element signature="e#7661#9260#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -857,39 +900,25 @@
     <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#45#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="223" selection-start-line="12" selection-start-column="223" selection-end-line="12" selection-end-column="223" />
+        <state relative-caret-position="216">
+          <caret line="12" column="223" lean-forward="false" selection-start-line="12" selection-start-column="223" selection-end-line="12" selection-end-column="223" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/memAlignOS.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solveTask6.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="58" selection-start-line="53" selection-start-column="3" selection-end-line="55" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solveTask5.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="115" column="59" selection-start-line="115" selection-start-column="3" selection-end-line="115" selection-end-column="59" />
+        <state relative-caret-position="144">
+          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -897,65 +926,111 @@
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
-          <folding />
+          <caret line="3" column="61" lean-forward="false" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/solveTasks.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/memAlignOS.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="113" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mUtil.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-297">
-          <caret line="166" column="65" selection-start-line="166" selection-start-column="65" selection-end-line="166" selection-end-column="65" />
-          <folding>
-            <element signature="e#45#64#0" expanded="true" />
-            <element signature="e#2864#4382#0" expanded="false" />
-            <element signature="e#4384#5983#0" expanded="false" />
-          </folding>
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="440" column="17" selection-start-line="440" selection-start-column="17" selection-end-line="440" selection-end-column="17" />
+        <state relative-caret-position="353">
+          <caret line="467" column="2" lean-forward="false" selection-start-line="467" selection-start-column="2" selection-end-line="467" selection-end-column="2" />
           <folding>
             <element signature="e#45#79#0" expanded="true" />
             <element signature="e#167#1755#0" expanded="false" />
             <element signature="e#1757#3171#0" expanded="false" />
             <element signature="e#3174#7151#0" expanded="false" />
             <element signature="e#9635#12126#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mUtil.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="71" lean-forward="false" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mUtil.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="32" column="64" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="64" />
+          <folding>
+            <element signature="e#40#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding>
+            <element signature="e#45#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solveTask5.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="871">
+          <caret line="115" column="59" lean-forward="false" selection-start-line="115" selection-start-column="3" selection-end-line="115" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solveTask6.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="67" column="73" lean-forward="false" selection-start-line="67" selection-start-column="73" selection-end-line="67" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solveTask7.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-151">
+          <caret line="57" column="4" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="137" column="54" lean-forward="true" selection-start-line="137" selection-start-column="54" selection-end-line="137" selection-end-column="54" />
+          <folding>
+            <element signature="e#3892#4002#0" expanded="false" />
+            <element signature="e#4409#6123#0" expanded="false" />
+            <element signature="e#6125#7659#0" expanded="false" />
+            <element signature="e#7661#9260#0" expanded="false" />
           </folding>
         </state>
       </provider>
