@@ -1,0 +1,35 @@
+
+Beide Varianten(mit oder ohne SIMD) liefern ähnliche Ergebnisse. Die Unterschiede entstehen vermutlich durch Rundungsfehler beim unterschiedlichen Berechnen mittels der 4Partialsumme, bei der die Float Mantisse langsamer überläuft als beim direkten aufaddieren auf eine Variable. 
+Das SIMD programm ist etwa 4mal schneller als ohne SIMD,was auf die Vektoriesierung zurückzuführen ist. 
+
+Programmausgabe:
+Task 6
+n = 5000
+SIMD: 137.209ms
+Std: 660.463ms
+Results: 2.08458e+10(SIMD)	2.08459e+10(Std)
+
+
+
+Die Berechnung des Reziproken bzw. der Reziporken Quadratwurzel lässt sich mit simd Befehlen mit nur einer Newton Iteration schnell und mit einer Genauigkeit von 10^-8 bei den hier getesteten Werten lösen.
+
+Programmausgabe:
+Task 7
+x: 1 0.5 2 4
+
+1/x: 1 2 0.5 0.25 
+resi: -5.96046e-08 -1.19209e-07 -2.98023e-08 -1.49012e-08 
+1/sqrt(x): 1 1.41421 0.707107 0.5 
+resi: -5.96046e-08 -2.42032e-08 -1.21016e-08 -2.98023e-08 
+
+
+
+Die Variante mit SIMD läuft etwa doppelt so schnell. Hierbei wurden anfangs mehrere Varianten ausprobiert und die schnellste zum Vergleich gezogen. Allerdings ist die Genauigkeit noch teilweise schlecht und die Abschätzung der Ordnung funktioniert nur bedingt gut. 
+
+Programmausgabe:
+Doing 24 orders.
+Std:  0.000378611ms/iteration
+SIMD: 0.000252391ms/iteration
+x: 	1	4	-1	-4
+exp(x): 	2.71828	54.5982	0.367879	0.0183156
+resi: 	-8.25484e-08	2.1275e-06	9.14976e-09	-1.40454e-09
