@@ -4,13 +4,13 @@
 
 #include "calcSIMD.h"
 #include <math.h>
-#include <iostream
+#include <iostream>
 #include <xmmintrin.h>
 #include "memAlignOS.h"
 
 
 using namespace std;
-
+/*
 float* jacobiIterOfBlockMatrixFourDiagsFloatSIMD(float valLowBlockDiag,float valLowMinDiag,float valMainDiag, float valUpDiag,float valUpBlockDiag, int n, float f, float valBoundary, int* numberOfIterations, bool* diagonalDominant) {
 
     n=1024;
@@ -193,7 +193,7 @@ float* jacobiIterOfBlockMatrixFourDiags(float valLowBlockDiag,float valLowMinDia
 
 
 
-
+*/
 
 
 

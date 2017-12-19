@@ -15,7 +15,7 @@ void compareResultsWithExp(float *x, float *results);
 void calcExpWithExternalFactorialSpreadIntoMemExternResults(int numTerms, float *xValues, float *resultsExp);
 int estimateIterations(float *x);
 // some additional tries
-float* calcExpWithExternalFactorial(int numTerms, float *xValues);
+float* calcExpWithExternalFactorial(int numTerms, float *xValues, float* r);
 float* calcExpWithExternalFactorialSpreadIntoMem(int numTerms, float *xValues);
 float* calcExpWithDivisionFloat(int numTerms, float *xValues);
 
@@ -52,8 +52,7 @@ void solveTask8() {
     start = std::chrono::high_resolution_clock::now();
     memAlignOS((void**) &resultExp,16,16);
     for(int i=0;i<repeat;i++) {
-        calcExpWithExternalFactorialSpreadIntoMemExternResults(numTerms,x,resultExp);
-
+        calcExpWithExternalFactorial(numTerms,x,resultExp);
     }
     finish = std::chrono::high_resolution_clock::now();
     elapsed=std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start);
@@ -62,6 +61,86 @@ void solveTask8() {
     freeAlignedMemOS(resultExp);
 };
 
+
+
+void compareResultsWithExp(float *x, float *results) {
+    std::cout<<"x: \t"<<x[0]<<"\t"<<x[1]<<"\t"<<x[2]<<"\t"<<x[3]<<std::endl;
+    std::cout<<"exp(x): \t"<<results[0]<<"\t"<<results[1]<<"\t"<<results[2]<<"\t"<<results[3]<<std::endl;
+    std::cout<<"resi: \t"<<results[0]-exp(x[0])<<"\t"<<results[1]-exp(x[1])<<"\t"<<results[2]-exp(x[2])<<"\t"<<results[3]-exp(x[3])<<std::endl;
+}
+
+int factorialInt(int n) {
+    int factorial=1;
+    for(;n>1;n--)
+        factorial*=n;
+    return factorial;
+}
+
+int estimateIterations(float *x) {
+    // Abbruchkriterium exp : |x| <= 1+1/2N   ==> N=(|x|-1)*2 für x>1w ?
+    // aber mind. 4 Iterationen
+    float max=fabs(x[0]);
+    if(fabs(x[1]))
+        max=fabs(x[1]);
+    if(fabs(x[2]))
+        max=fabs(x[2]);
+    if(fabs(x[3]))
+        max=fabs(x[3]);
+    if(max>3) {
+        return (max-1)*2*4;  //twicefor better accuracy
+    }else {
+        return 4;
+    }
+}
+// some additional tries, x<0 is not handled correctly
+float* calcExpWithExternalFactorial(int numTerms, float *xValues, float* resultExp) {
+
+    float *numFactorial, *coeffCurrentOrder,*x, *ones;
+    __m128 coeffCurrentOrderSMD, xSMD, currentOrder, oneSMD, resultExpSMD;
+    float dummyFactorial;
+
+    memAlignOS((void**) &coeffCurrentOrder,16,16);
+    memAlignOS((void**) &x,16,16);
+    memAlignOS((void**) &ones,16,16);
+
+
+    numFactorial=new float[numTerms-1];
+    dummyFactorial=1;
+
+    for(int i=2;i<=numTerms;i++) {
+        dummyFactorial*=i;
+        numFactorial[i-2]=float(1)/dummyFactorial;
+    }
+
+    x[0]=xValues[0];
+    x[1]=xValues[1];
+    x[2]=xValues[2];
+    x[3]=xValues[3];
+
+    ones[0]=1;
+    coeffCurrentOrder[0]=numFactorial[numTerms-2];
+
+    coeffCurrentOrderSMD=_mm_load_ps1(coeffCurrentOrder);
+    oneSMD=_mm_load_ps1(ones);
+    xSMD=_mm_load_ps(x);
+
+    resultExpSMD=_mm_mul_ps(coeffCurrentOrderSMD,xSMD);
+    for(int i=numTerms-1;i>1;i--) {
+        coeffCurrentOrder[0]=numFactorial[i-2];
+        coeffCurrentOrderSMD=_mm_load_ps1(coeffCurrentOrder);
+        resultExpSMD=_mm_add_ps(resultExpSMD,coeffCurrentOrderSMD);
+        resultExpSMD=_mm_mul_ps(resultExpSMD,xSMD);
+    }
+    resultExpSMD=_mm_add_ps(resultExpSMD,oneSMD);
+    resultExpSMD=_mm_mul_ps(resultExpSMD,xSMD);
+    resultExpSMD=_mm_add_ps(resultExpSMD,oneSMD);
+    _mm_store_ps(resultExp,resultExpSMD);
+
+    delete(numFactorial);
+    freeAlignedMemOS(coeffCurrentOrder); freeAlignedMemOS(x); freeAlignedMemOS(ones);
+
+    return resultExp;
+}
 void calcExpWithExternalFactorialSpreadIntoMemExternResults(int numTerms, float *xValues, float *resultExp) {
 
     float *coeffCurrentOrder,*x, *ones;
@@ -115,87 +194,6 @@ void calcExpWithExternalFactorialSpreadIntoMemExternResults(int numTerms, float 
     freeAlignedMemOS(coeffCurrentOrder);freeAlignedMemOS(x);freeAlignedMemOS(ones);
 }
 
-
-
-void compareResultsWithExp(float *x, float *results) {
-    std::cout<<"x: \t"<<x[0]<<"\t"<<x[1]<<"\t"<<x[2]<<"\t"<<x[3]<<std::endl;
-    std::cout<<"exp(x): \t"<<results[0]<<"\t"<<results[1]<<"\t"<<results[2]<<"\t"<<results[3]<<std::endl;
-    std::cout<<"resi: \t"<<results[0]-exp(x[0])<<"\t"<<results[1]-exp(x[1])<<"\t"<<results[2]-exp(x[2])<<"\t"<<results[3]-exp(x[3])<<std::endl;
-}
-
-int factorialInt(int n) {
-    int factorial=1;
-    for(;n>1;n--)
-        factorial*=n;
-    return factorial;
-}
-
-int estimateIterations(float *x) {
-    // Abbruchkriterium exp : |x| <= 1+1/2N   ==> N=(|x|-1)*2 für x>1w ?
-    // aber mind. 4 Iterationen
-    float max=fabs(x[0]);
-    if(fabs(x[1]))
-        max=fabs(x[1]);
-    if(fabs(x[2]))
-        max=fabs(x[2]);
-    if(fabs(x[3]))
-        max=fabs(x[3]);
-    if(max>3) {
-        return (max-1)*2*4;  //twicefor better accuracy
-    }else {
-        return 4;
-    }
-}
-// some additional tries, x<0 is not handled correctly
-float* calcExpWithExternalFactorial(int numTerms, float *xValues) {
-
-    float *numFactorial, *coeffCurrentOrder,*x, *ones, *resultExp;
-    __m128 coeffCurrentOrderSMD, xSMD, currentOrder, oneSMD, resultExpSMD;
-    float dummyFactorial;
-
-    memAlignOS((void**) &coeffCurrentOrder,16,16);
-    memAlignOS((void**) &x,16,16);
-    memAlignOS((void**) &ones,16,16);
-    memAlignOS((void**) &resultExp,16,16);
-
-
-    numFactorial=new float[numTerms-1];
-    dummyFactorial=1;
-
-    for(int i=2;i<=numTerms;i++) {
-        dummyFactorial*=i;
-        numFactorial[i-2]=float(1)/dummyFactorial;
-    }
-
-    x[0]=xValues[0];
-    x[1]=xValues[1];
-    x[2]=xValues[2];
-    x[3]=xValues[3];
-
-    ones[0]=ones[1]=ones[2]=ones[3]=1;
-    coeffCurrentOrder[0]=coeffCurrentOrder[1]=coeffCurrentOrder[2]=coeffCurrentOrder[3]=numFactorial[numTerms-2];
-
-    coeffCurrentOrderSMD=_mm_load_ps(coeffCurrentOrder);
-    oneSMD=_mm_load_ps(ones);
-    xSMD=_mm_load_ps(x);
-
-    resultExpSMD=_mm_mul_ps(coeffCurrentOrderSMD,xSMD);
-    for(int i=numTerms-1;i>1;i--) {
-        coeffCurrentOrder[0]=coeffCurrentOrder[1]=coeffCurrentOrder[2]=coeffCurrentOrder[3]=numFactorial[i-2];
-        coeffCurrentOrderSMD=_mm_load_ps(coeffCurrentOrder);
-        resultExpSMD=_mm_add_ps(resultExpSMD,coeffCurrentOrderSMD);
-        resultExpSMD=_mm_mul_ps(resultExpSMD,xSMD);
-    }
-    resultExpSMD=_mm_add_ps(resultExpSMD,oneSMD);
-    resultExpSMD=_mm_mul_ps(resultExpSMD,xSMD);
-    resultExpSMD=_mm_add_ps(resultExpSMD,oneSMD);
-    _mm_store_ps(resultExp,resultExpSMD);
-
-    delete(numFactorial);
-    freeAlignedMemOS(coeffCurrentOrder); freeAlignedMemOS(x); freeAlignedMemOS(ones);
-
-    return resultExp;
-}
 
 float* calcExpWithDivisionFloat(int numTerms, float *xValues) {
     // Pure SIMD
