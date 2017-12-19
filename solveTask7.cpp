@@ -1,5 +1,5 @@
 #include <xmmintrin.h>
-#include "../../memAlignOS.h"
+#include "memAlignOS.h"
 #include <iostream>
 #include <math.h>
 

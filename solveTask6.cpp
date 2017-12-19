@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include "xmmintrin.h"
-#include "../../memAlignOS.h"
+#include "memAlignOS.h"
 #include "pmmintrin.h"
 #include <chrono>
 #include <math.h>
