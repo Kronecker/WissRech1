@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "../../memAlignOS.h"
+#include "memAlignOS.h"
 #include <xmmintrin.h>
 #include "math.h"
 #include <chrono>
