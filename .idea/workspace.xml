@@ -36,7 +36,7 @@
       <file leaf-file-name="calcSIMD.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calcSIMD.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
+            <state relative-caret-position="3510">
               <caret line="195" column="2" lean-forward="false" selection-start-line="195" selection-start-column="2" selection-end-line="195" selection-end-column="2" />
               <folding>
                 <element signature="e#40#61#0" expanded="true" />
@@ -48,7 +48,7 @@
       <file leaf-file-name="jacobiIterationSolver.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
+            <state relative-caret-position="10206">
               <caret line="567" column="0" lean-forward="false" selection-start-line="389" selection-start-column="0" selection-end-line="567" selection-end-column="0" />
               <folding />
             </state>
@@ -58,7 +58,7 @@
       <file leaf-file-name="solveTask6.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solveTask6.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
+            <state relative-caret-position="684">
               <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="42" selection-end-column="54" />
               <folding>
                 <element signature="e#45#64#0" expanded="true" />
@@ -70,7 +70,7 @@
       <file leaf-file-name="memAlignOS.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/memAlignOS.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="306">
               <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
               <folding>
                 <element signature="e#149#314#0" expanded="true" />
@@ -92,7 +92,7 @@
       <file leaf-file-name="solveTask7.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solveTask7.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
+            <state relative-caret-position="1602">
               <caret line="89" column="47" lean-forward="false" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -101,21 +101,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="solveTask8.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="solveTask8.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2143">
-              <caret line="141" column="4" lean-forward="false" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="4" />
+            <state relative-caret-position="-1972">
+              <caret line="136" column="5" lean-forward="false" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
               <folding>
                 <element signature="e#45#64#0" expanded="true" />
-                <element signature="e#6719#8253#0" expanded="false" />
-                <element signature="e#8255#9854#0" expanded="false" />
+                <element signature="e#6715#8249#0" expanded="false" />
+                <element signature="e#8251#9850#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="solveTask9.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="solveTask9.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
@@ -482,16 +482,16 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13638814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32738718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31689402" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31689402" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39874083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39874083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32738718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -555,7 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -594,12 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#4403#4513#0" expanded="false" />
-            <element signature="e#4920#6634#0" expanded="false" />
-            <element signature="e#6636#8170#0" expanded="false" />
-            <element signature="e#8172#9771#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,12 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <element signature="e#4403#4513#0" expanded="false" />
-            <element signature="e#4920#6634#0" expanded="false" />
-            <element signature="e#6636#8170#0" expanded="false" />
-            <element signature="e#8172#9771#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -668,12 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <element signature="e#4403#4513#0" expanded="false" />
-            <element signature="e#4920#6634#0" expanded="false" />
-            <element signature="e#6636#8170#0" expanded="false" />
-            <element signature="e#8172#9771#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -698,12 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <element signature="e#4403#4513#0" expanded="false" />
-            <element signature="e#4920#6634#0" expanded="false" />
-            <element signature="e#6636#8170#0" expanded="false" />
-            <element signature="e#8172#9771#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -721,12 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <element signature="e#4403#4513#0" expanded="false" />
-            <element signature="e#4920#6634#0" expanded="false" />
-            <element signature="e#6636#8170#0" expanded="false" />
-            <element signature="e#8172#9771#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -744,12 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <element signature="e#4403#4513#0" expanded="false" />
-            <element signature="e#4920#6634#0" expanded="false" />
-            <element signature="e#6636#8170#0" expanded="false" />
-            <element signature="e#8172#9771#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,7 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -803,7 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-151">
           <caret line="57" column="4" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -853,9 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -863,7 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-507">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -871,12 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-          <folding>
-            <element signature="e#4403#4513#0" expanded="false" />
-            <element signature="e#4920#6634#0" expanded="false" />
-            <element signature="e#6636#8170#0" expanded="false" />
-            <element signature="e#8172#9771#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -884,9 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,21 +846,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-          <folding>
-            <element signature="e#45#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Abgabe/Task6_7_8/solveTask6.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -920,7 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,18 +864,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
           <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding>
-            <element signature="e#4403#4513#0" expanded="false" />
-            <element signature="e#4920#6634#0" expanded="false" />
-            <element signature="e#6636#8170#0" expanded="false" />
-            <element signature="e#8172#9771#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jacobiIterationSolver.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
+        <state relative-caret-position="10206">
           <caret line="567" column="0" lean-forward="false" selection-start-line="389" selection-start-column="0" selection-end-line="567" selection-end-column="0" />
           <folding />
         </state>
@@ -955,7 +885,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/calcSIMD.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
+        <state relative-caret-position="3510">
           <caret line="195" column="2" lean-forward="false" selection-start-line="195" selection-start-column="2" selection-end-line="195" selection-end-column="2" />
           <folding>
             <element signature="e#40#61#0" expanded="true" />
@@ -965,7 +895,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/memAlignOS.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="306">
           <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding>
             <element signature="e#149#314#0" expanded="true" />
@@ -975,7 +905,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/solveTask6.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
+        <state relative-caret-position="684">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="42" selection-end-column="54" />
           <folding>
             <element signature="e#45#64#0" expanded="true" />
@@ -993,7 +923,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/solveTask7.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
+        <state relative-caret-position="1602">
           <caret line="89" column="47" lean-forward="false" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
@@ -1003,12 +933,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2143">
-          <caret line="141" column="4" lean-forward="false" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="4" />
+        <state relative-caret-position="-1972">
+          <caret line="136" column="5" lean-forward="false" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
           <folding>
             <element signature="e#45#64#0" expanded="true" />
-            <element signature="e#6719#8253#0" expanded="false" />
-            <element signature="e#8255#9854#0" expanded="false" />
+            <element signature="e#6715#8249#0" expanded="false" />
+            <element signature="e#8251#9850#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solveTask9.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding>
+            <element signature="e#45#68#0" expanded="true" />
           </folding>
         </state>
       </provider>

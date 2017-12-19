@@ -139,7 +139,7 @@ float* calcExpWithExternalFactorial(int numTerms, float *xValues, float* resultE
     resultExpSMD=_mm_mul_ps(resultExpSMD,xSMD);
     resultExpSMD=_mm_add_ps(resultExpSMD,oneSMD);
     resultExpSMD=_mm_add_ps(_mm_andnot_ps(signMask,resultExpSMD),_mm_and_ps(signMask,_mm_div_ps(oneSMD,resultExpSMD)));
-    
+
     _mm_store_ps(resultExp,resultExpSMD);
 
     delete(numFactorial);
