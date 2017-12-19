@@ -96,7 +96,7 @@ int estimateIterations(float *x) {
 float* calcExpWithExternalFactorial(int numTerms, float *xValues, float* resultExp) {
 
     float *numFactorial, *coeffCurrentOrder,*x, *ones;
-    __m128 coeffCurrentOrderSMD, xSMD, currentOrder, oneSMD, resultExpSMD;
+    __m128 coeffCurrentOrderSMD, xSMD, currentOrder, oneSMD, resultExpSMD, zero, signMask;
     float dummyFactorial;
 
     memAlignOS((void**) &coeffCurrentOrder,16,16);
@@ -124,6 +124,10 @@ float* calcExpWithExternalFactorial(int numTerms, float *xValues, float* resultE
     oneSMD=_mm_load_ps1(ones);
     xSMD=_mm_load_ps(x);
 
+    zero=_mm_setzero_ps();
+    signMask=_mm_cmplt_ps(xSMD,zero);
+    xSMD=_mm_sub_ps(_mm_andnot_ps(signMask,xSMD),_mm_and_ps(signMask,xSMD));
+
     resultExpSMD=_mm_mul_ps(coeffCurrentOrderSMD,xSMD);
     for(int i=numTerms-1;i>1;i--) {
         coeffCurrentOrder[0]=numFactorial[i-2];
@@ -134,6 +138,8 @@ float* calcExpWithExternalFactorial(int numTerms, float *xValues, float* resultE
     resultExpSMD=_mm_add_ps(resultExpSMD,oneSMD);
     resultExpSMD=_mm_mul_ps(resultExpSMD,xSMD);
     resultExpSMD=_mm_add_ps(resultExpSMD,oneSMD);
+    resultExpSMD=_mm_add_ps(_mm_andnot_ps(signMask,resultExpSMD),_mm_and_ps(signMask,_mm_div_ps(oneSMD,resultExpSMD)));
+    
     _mm_store_ps(resultExp,resultExpSMD);
 
     delete(numFactorial);

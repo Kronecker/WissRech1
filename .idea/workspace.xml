@@ -13,9 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d4d96824-6edc-448d-afa7-9d35641b622d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calcSIMD.cpp" afterPath="$PROJECT_DIR$/calcSIMD.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calcSIMD.h" afterPath="$PROJECT_DIR$/calcSIMD.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solveTask7.cpp" afterPath="$PROJECT_DIR$/solveTask7.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solveTask8.cpp" afterPath="$PROJECT_DIR$/solveTask8.cpp" />
     </list>
     <ignored path="M:\Uni\WissRech1\.idea\shelf/" />
@@ -92,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="solveTask7.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="solveTask7.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solveTask7.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-392">
-              <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+            <state relative-caret-position="382">
+              <caret line="89" column="47" lean-forward="false" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -104,16 +101,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="solveTask8.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="solveTask8.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+            <state relative-caret-position="2143">
+              <caret line="141" column="4" lean-forward="false" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="4" />
               <folding>
                 <element signature="e#45#64#0" expanded="true" />
-                <element signature="e#4583#6432#0" expanded="false" />
-                <element signature="e#6435#7969#0" expanded="false" />
-                <element signature="e#7971#9570#0" expanded="false" />
+                <element signature="e#6719#8253#0" expanded="false" />
+                <element signature="e#8255#9854#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -164,9 +160,9 @@
         <option value="$PROJECT_DIR$/Abgabe/Task6_7_8/solveTask8.cpp" />
         <option value="$PROJECT_DIR$/calcSIMD.h" />
         <option value="$PROJECT_DIR$/calcSIMD.cpp" />
-        <option value="$PROJECT_DIR$/solveTask8.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/solveTask7.cpp" />
+        <option value="$PROJECT_DIR$/solveTask8.cpp" />
       </list>
     </option>
   </component>
@@ -489,7 +485,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32738718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31689402" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31689402" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39874083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -967,19 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-          <folding>
-            <element signature="e#45#64#0" expanded="true" />
-            <element signature="e#4583#6432#0" expanded="false" />
-            <element signature="e#6435#7969#0" expanded="false" />
-            <element signature="e#7971#9570#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/memAlignOS.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1010,10 +993,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/solveTask7.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-392">
-          <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+        <state relative-caret-position="382">
+          <caret line="89" column="47" lean-forward="false" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solveTask8.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2143">
+          <caret line="141" column="4" lean-forward="false" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="4" />
+          <folding>
+            <element signature="e#45#64#0" expanded="true" />
+            <element signature="e#6719#8253#0" expanded="false" />
+            <element signature="e#8255#9854#0" expanded="false" />
           </folding>
         </state>
       </provider>
