@@ -30,6 +30,7 @@ void solveTask10() {
     }
 }
 
+// https://www.uni-muenster.de/AMM/num/Vorlesungen/NumForHPC_WS1213/Material/pthreads-article.pdf
 
 
 
