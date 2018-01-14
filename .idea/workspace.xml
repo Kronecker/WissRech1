@@ -11,11 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4d96824-6edc-448d-afa7-9d35641b622d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Abgabe/Task10_11/main.cpp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Abgabe/Makefile" afterPath="" />
+    <list default="true" id="d4d96824-6edc-448d-afa7-9d35641b622d" name="Default" comment="Finished T10aT11&#10;Starting T12">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solveTask10.cpp" afterPath="$PROJECT_DIR$/solveTask10.cpp" />
     </list>
     <ignored path="M:\Uni\WissRech1\.idea\shelf/" />
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
@@ -98,18 +95,17 @@
       <file leaf-file-name="solveTask10.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/solveTask10.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+            <state relative-caret-position="471">
+              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding>
                 <element signature="e#40#58#0" expanded="true" />
                 <element signature="e#815#880#0" expanded="false" />
                 <element signature="e#4076#4228#0" expanded="false" />
-                <element signature="e#4230#5019#0" expanded="false" />
-                <element signature="e#5021#5812#0" expanded="false" />
-                <element signature="e#5836#6718#0" expanded="false" />
-                <element signature="e#7598#7786#0" expanded="false" />
-                <element signature="e#7788#7975#0" expanded="false" />
-                <element signature="e#7977#8241#0" expanded="false" />
+                <marker date="1515945419924" expanded="false" signature="5099:5812" ph="{...}" />
+                <marker date="1515945419924" expanded="false" signature="5921:6718" ph="{...}" />
+                <marker date="1515945419924" expanded="false" signature="7639:7786" ph="{...}" />
+                <marker date="1515945419924" expanded="false" signature="7842:7975" ph="{...}" />
+                <marker date="1515945419924" expanded="false" signature="8038:8241" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -152,8 +148,8 @@
         <option value="$PROJECT_DIR$/solveTasks.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/solveTask10.cpp" />
         <option value="$PROJECT_DIR$/Abgabe/Task10_11/main.cpp" />
+        <option value="$PROJECT_DIR$/solveTask10.cpp" />
       </list>
     </option>
   </component>
@@ -540,7 +536,8 @@
     <MESSAGE value="Finalizing T6-8" />
     <MESSAGE value="Starting T9" />
     <MESSAGE value="Starting T10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting T10" />
+    <MESSAGE value="Finished T10aT11&#10;Starting T12" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished T10aT11&#10;Starting T12" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -949,18 +946,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/solveTask10.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+        <state relative-caret-position="471">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
             <element signature="e#40#58#0" expanded="true" />
             <element signature="e#815#880#0" expanded="false" />
             <element signature="e#4076#4228#0" expanded="false" />
-            <element signature="e#4230#5019#0" expanded="false" />
-            <element signature="e#5021#5812#0" expanded="false" />
-            <element signature="e#5836#6718#0" expanded="false" />
-            <element signature="e#7598#7786#0" expanded="false" />
-            <element signature="e#7788#7975#0" expanded="false" />
-            <element signature="e#7977#8241#0" expanded="false" />
+            <marker date="1515945419924" expanded="false" signature="5099:5812" ph="{...}" />
+            <marker date="1515945419924" expanded="false" signature="5921:6718" ph="{...}" />
+            <marker date="1515945419924" expanded="false" signature="7639:7786" ph="{...}" />
+            <marker date="1515945419924" expanded="false" signature="7842:7975" ph="{...}" />
+            <marker date="1515945419924" expanded="false" signature="8038:8241" ph="{...}" />
           </folding>
         </state>
       </provider>
