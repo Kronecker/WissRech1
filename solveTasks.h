@@ -13,4 +13,5 @@ void solveTask7();
 void solveTask8();
 void solveTask9();
 void solveTask10();
+void solveTask12();
 #endif //WISSRECH1_SOLVETASKS_H
