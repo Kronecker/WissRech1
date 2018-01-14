@@ -11,6 +11,7 @@
 
 using namespace std;
 
+void solveTask10();
 
 double scalarprodSingleThread(double *a,double *b, int n);
 double scalarprodPThread(double *a, double *b, int n, int procs);
@@ -36,6 +37,9 @@ typedef struct messagetype{
 };
 
 
+int main() {
+    solveTask10();
+}
 
 
 
