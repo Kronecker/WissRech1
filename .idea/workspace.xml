@@ -12,8 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4d96824-6edc-448d-afa7-9d35641b622d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Abgabe/Task12/main.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Abgabe/Task12/main.cpp" afterPath="$PROJECT_DIR$/Abgabe/Task12/main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solveTask12.cpp" afterPath="$PROJECT_DIR$/solveTask12.cpp" />
     </list>
     <ignored path="M:\Uni\WissRech1\.idea\shelf/" />
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
@@ -67,8 +68,8 @@
       <file leaf-file-name="solveTask12.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solveTask12.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1734">
-              <caret line="102" column="20" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
+            <state relative-caret-position="1230">
+              <caret line="379" column="42" lean-forward="true" selection-start-line="379" selection-start-column="42" selection-end-line="379" selection-end-column="42" />
               <folding>
                 <element signature="e#39#56#0" expanded="true" />
               </folding>
@@ -79,8 +80,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Abgabe/Task12/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="88" column="161" lean-forward="false" selection-start-line="88" selection-start-column="161" selection-end-line="88" selection-end-column="161" />
+            <state relative-caret-position="353">
+              <caret line="346" column="53" lean-forward="false" selection-start-line="346" selection-start-column="53" selection-end-line="346" selection-end-column="53" />
               <folding>
                 <element signature="e#39#56#0" expanded="true" />
               </folding>
@@ -421,7 +422,8 @@
       <workItem from="1513349757019" duration="202000" />
       <workItem from="1513350268084" duration="1097000" />
       <workItem from="1513421967983" duration="5119000" />
-      <workItem from="1516059368711" duration="13000" />
+      <workItem from="1516059368711" duration="25000" />
+      <workItem from="1516059403946" duration="45000" />
     </task>
     <task id="LOCAL-00001" summary="removed clion files">
       <created>1512901439668</created>
@@ -472,11 +474,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516056706687</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Finish T12">
+      <created>1516059386118</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1516059386118</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25676000" />
+    <option name="totallyTimeSpent" value="25733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="-8" width="1843" height="1096" extended-state="6" />
@@ -912,16 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solveTask12.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="102" column="20" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
-          <folding>
-            <element signature="e#39#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Abgabe/Task10_11/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
@@ -938,10 +937,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/solveTask12.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="379" column="42" lean-forward="true" selection-start-line="379" selection-start-column="42" selection-end-line="379" selection-end-column="42" />
+          <folding>
+            <element signature="e#39#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Abgabe/Task12/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="88" column="161" lean-forward="false" selection-start-line="88" selection-start-column="161" selection-end-line="88" selection-end-column="161" />
+        <state relative-caret-position="353">
+          <caret line="346" column="53" lean-forward="false" selection-start-line="346" selection-start-column="53" selection-end-line="346" selection-end-column="53" />
           <folding>
             <element signature="e#39#56#0" expanded="true" />
           </folding>

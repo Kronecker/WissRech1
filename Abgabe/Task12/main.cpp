@@ -344,6 +344,7 @@ void* subrJacobiThreadsBarrierCached(void* param) {
     }
     if(m->threadId==0) {  // I'm the Master.
         m->mJShared->lastIterSol=lastIterSol;
+        m->mJShared->actualIteration=actualIteration;
     }
 
 }
