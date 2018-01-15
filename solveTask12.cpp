@@ -28,7 +28,7 @@ void solveTask12() {
     double valBoundary=0;
     double veloZero=200;
 
-    double *solutionVector;
+    double *solutionVector,*solutionVector2;
     double h, hSquare, veloX, veloY, valLowBlockDiag, valLowMinDiag, valMainDiag, valUpDiag, valUpBlockDiag;
 
 
@@ -74,7 +74,7 @@ void solveTask12() {
         myfile.close();
         std::cout<<"Results saved."<<std::endl;
     }
-   delete(solutionVector);
+
 
 
     std::cout<<std::endl<<"Jacobi with PThreads started"<<std::endl;
@@ -84,7 +84,7 @@ void solveTask12() {
     for(int i=0;i<procNum;i++) {
         start = std::chrono::high_resolution_clock::now();
 
-        solutionVector = jacobiIterOfBlockMatrixFourDiagsPThread(valLowBlockDiag, valLowMinDiag, valMainDiag, valUpDiag,
+        solutionVector2 = jacobiIterOfBlockMatrixFourDiagsPThread(valLowBlockDiag, valLowMinDiag, valMainDiag, valUpDiag,
                                                                  valUpBlockDiag, n, f, valBoundary, procs[i]);
 
         finish = std::chrono::high_resolution_clock::now();
@@ -100,7 +100,7 @@ void solveTask12() {
             for (int k = 0; k < n; k++) {
                 for (int i = 0; i < n; i++) {
                     index = k * n + i;
-                    myfile << k * h << " " << i * h << " " << solutionVector[index];
+                    myfile << k * h << " " << i * h << " " << solutionVector2[index];
                     myfile << "\n";
                 }
                 myfile << "\n";
@@ -108,7 +108,15 @@ void solveTask12() {
             myfile.close();
             std::cout << "Results saved." << std::endl;
         }
-      delete (solutionVector);
+
+        double resi=0;
+        int nn=n*n;
+        for(int k=0;k>nn;k++) {
+            resi=fabs(solutionVector2[k]-solutionVector[k]);
+        }
+        std::cout<<resi<<std::endl;
+        delete(solutionVector);
+      delete (solutionVector2);
 
     }
 
@@ -215,6 +223,7 @@ typedef struct messJacobiShared{
 };
 
 typedef struct messJacobiPrivate{
+    int threadId;
     int startBlockIndex;
     int endBlockIndex;
     messJacobiShared* mJShared;
@@ -260,12 +269,14 @@ double* jacobiIterOfBlockMatrixFourDiagsPThread(double valLowBlockDiag,double va
     messJacobiShared mJShared={actualIteration, lastIterSol, valMainDiag, valLowBlockDiag, valLowMinDiag,valUpDiag, valUpBlockDiag,f,n};
 
     messJacobiPrivate* mJPrivates=new messJacobiPrivate[procs];
+    mJPrivates[0].threadId=0;
     mJPrivates[0].mJShared=&mJShared;
     mJPrivates[0].startBlockIndex=1;
     mJPrivates[0].endBlockIndex=mJPrivates[0].startBlockIndex+numBlocksPerThread+(restBlocks>0?1:0)-1;
     restBlocks--;
 
     for(int l=1;l<procs;l++) {
+        mJPrivates[l].threadId=l;
         mJPrivates[l].mJShared=&mJShared;
         mJPrivates[l].startBlockIndex=1+mJPrivates[l-1].endBlockIndex;
         mJPrivates[l].endBlockIndex=mJPrivates[l].startBlockIndex+numBlocksPerThread+(restBlocks>0?1:0)-1;
@@ -336,12 +347,14 @@ double* jacobiIterOfBlockMatrixFourDiagsPThreadBarrier(double valLowBlockDiag,do
     messJacobiShared mJShared={actualIteration, lastIterSol, valMainDiag, valLowBlockDiag, valLowMinDiag,valUpDiag, valUpBlockDiag,f,n};
 
     messJacobiPrivate* mJPrivates=new messJacobiPrivate[procs];
+    mJPrivates[0].threadId=0;
     mJPrivates[0].mJShared=&mJShared;
     mJPrivates[0].startBlockIndex=1;
     mJPrivates[0].endBlockIndex=mJPrivates[0].startBlockIndex+numBlocksPerThread+(restBlocks>0?1:0)-1;
     restBlocks--;
 
     for(int l=1;l<procs;l++) {
+        mJPrivates[l].threadId=l;
         mJPrivates[l].mJShared=&mJShared;
         mJPrivates[l].startBlockIndex=1+mJPrivates[l-1].endBlockIndex;
         mJPrivates[l].endBlockIndex=mJPrivates[l].startBlockIndex+numBlocksPerThread+(restBlocks>0?1:0)-1;
@@ -374,7 +387,8 @@ double* jacobiIterOfBlockMatrixFourDiagsPThreadBarrier(double valLowBlockDiag,do
 }
 void* subrJacobiThreads(void* param) {
     messJacobiPrivate *m=(messJacobiPrivate *) param;
-
+    int nm1=m->mJShared->n-1;
+    int index;
         for (int k = m->startBlockIndex;
              k <= m->endBlockIndex; k++) { // iterate through blocks -> divide into small for loops per thread
             for (int i = 1; i < nm1; i++) {  // iterate in block
@@ -390,8 +404,31 @@ void* subrJacobiThreads(void* param) {
             }
 
         }
-        pthread_barrier_wait(iterationBarrier);
 
-    }
+
+
 
 }
+void* subrJacobiThreadsBarrier(void* param) {
+    messJacobiPrivate *m=(messJacobiPrivate *) param;
+    int nm1=m->mJShared->n-1;
+    int index;
+    for (int k = m->startBlockIndex;
+         k <= m->endBlockIndex; k++) { // iterate through blocks -> divide into small for loops per thread
+        for (int i = 1; i < nm1; i++) {  // iterate in block
+            index = k * m->mJShared->n + i;
+            m->mJShared->actualIteration[index] = 1 / m->mJShared->valMainDiag *
+                                                  (m->mJShared->f - m->mJShared->valLowBlockDiag *
+                                                                    m->mJShared->lastIterSol[index-m->mJShared->n] -
+                                                   m->mJShared->valLowMinDiag *
+                                                   m->mJShared->lastIterSol[index - 1] -
+                                                   m->mJShared->valUpDiag * m->mJShared->lastIterSol[index + 1] -
+                                                   m->mJShared->valUpBlockDiag *
+                                                   m->mJShared->lastIterSol[index + m->mJShared->n]);
+        }
+
+    }
+    pthread_barrier_wait(&iterationBarrier);
+
+}
+
