@@ -292,22 +292,23 @@ double* jacobiIterOfBlockMatrixFourDiagsPThreadBarrier(double valLowBlockDiag,do
 }
 void* subrJacobiThreads(void* param) {
     messJacobiPrivate *m=(messJacobiPrivate *) param;
-    int nm1=m->mJShared->n-1;
+   // Sharing is caring, but caching is smashing.
+    double *actualIteration=m->mJShared->actualIteration, *lastIterSol=m->mJShared->lastIterSol;
+    double valLowMinDiag=m->mJShared->valLowMinDiag, valLowBlockDiag=m->mJShared->valLowBlockDiag, valMainDiag=m->mJShared->valMainDiag, valUpDiag=m->mJShared->valUpDiag,
+            valUpBlockDiag=m->mJShared->valUpBlockDiag, f=m->mJShared->f;
+    double *temp;
+    int nm1=m->mJShared->n-1, n=m->mJShared->n;
+    int startBlockIndex=m->startBlockIndex, endBlockIndex=m->endBlockIndex;
     int index;
-        for (int k = m->startBlockIndex;
-             k <= m->endBlockIndex; k++) { // iterate through blocks -> divide into small for loops per thread
+        for (int k =startBlockIndex; k <= endBlockIndex; k++) { // iterate through blocks -> divide into small for loops per thread
             for (int i = 1; i < nm1; i++) {  // iterate in block
-                index = k * m->mJShared->n + i;
-                m->mJShared->actualIteration[index] = 1 / m->mJShared->valMainDiag *
-                                                      (m->mJShared->f - m->mJShared->valLowBlockDiag *
-                                                                        m->mJShared->lastIterSol[index-m->mJShared->n] -
-                                                       m->mJShared->valLowMinDiag *
-                                                       m->mJShared->lastIterSol[index - 1] -
-                                                       m->mJShared->valUpDiag * m->mJShared->lastIterSol[index + 1] -
-                                                       m->mJShared->valUpBlockDiag *
-                                                       m->mJShared->lastIterSol[index + m->mJShared->n]);
+                index = k * n + i;
+                actualIteration[index] = 1 / valMainDiag *
+                                                      (f - valLowBlockDiag * lastIterSol[index-n] -
+                                                       valLowMinDiag * lastIterSol[index - 1] -
+                                                       valUpDiag * lastIterSol[index + 1] -
+                                                       valUpBlockDiag * lastIterSol[index + n]);
             }
-
         }
 }
 
@@ -348,7 +349,7 @@ void* subrJacobiThreadsBarrierCached(void* param) {
     }
 
 }
-// Dump
+// Dump, pls ignore everything below
 void* subrJacobiThreadsBarrier(void* param) {  // deprecated
     messJacobiPrivate *m=(messJacobiPrivate *) param;
     int nm1=m->mJShared->n-1;
