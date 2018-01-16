@@ -274,7 +274,7 @@ void* subrScalarprodPThread(void* param) {
     double *a=mess->a,*b=mess->b;
     int n=mess->n;
     for(int i=0;i<n;i++) {
-        sum+a[i]*b[i];
+        sum+=a[i]*b[i];
     }
     mess->sum=sum;
 }

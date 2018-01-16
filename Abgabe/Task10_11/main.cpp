@@ -274,11 +274,13 @@ double scalarprodPThreadGlobalResultMutex(double *a, double *b, int n, int procs
 
 void* subrScalarprodPThread(void* param) {
     messagetype *mess=(messagetype *) param;
-    mess->sum=0;
-    for(int i=0;i<mess->n;i++) {
-        mess->sum+=mess->a[i]*mess->b[i];
+    double sum=0;
+    double *a=mess->a,*b=mess->b;
+    int n=mess->n;
+    for(int i=0;i<n;i++) {
+        sum+=a[i]*b[i];
     }
-
+    mess->sum=sum;
 }
 
 void* subrScalarprodPThreadGlobalNoMutex(void* param) {

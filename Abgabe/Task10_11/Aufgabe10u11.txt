@@ -1,0 +1,60 @@
+Verwendete Prozessor: i7-6700K mit 4 Kernen, 8 logische Prozessoren, L1/L2/L3 Cache 256KB, 1MB, 8MB
+
+
+Aufgabe 10:
+Die Ausgabe des Programms ("Multi Thread") zeigt zunächst eine Verschlechterung für die Laufzeit mit einem Thread vergleichen mit der einfachen version ohne Threads("Single Thread"). Für 2 und 4 Threads verringert sich die Laufzeit auf etwa 75% / 60%. Die Verbesserung ist auf die Verteilung der Rechenlast auf die inaktiven Prozessoren zurückzuführen. Für eine größere Anzahl von Kerne nimmt die Laufzeit wieder zu und überschreitet die Laufzeit des einfachen Programms um eine Größenordnung. Das erstellen und abarbeiten der Threads dauert länger als die eigentliche Berechnung und ist damit für diesen Prozessor nicht sinnvoll.
+
+Aufgabe 11:
+a) 
+Das Ergebnis für einen Thread ist wie zu erwarten richtig. Die Ergebnisse für 2 bis 32 Threads sind falsch. Der abwechselnde Zugriff auf die Summationsvariable führt zu einer falschen Summation, im Falle wenn zwischen Lesen und Schreiben der Summationsvariable ein Zugriff eines anderen Threads geschiet. Dadurch wird die Summation des ersten Threads ignoriert, da der letzte Thread die Änderung nicht mehr "sieht". 
+Interessant ist dass das Ergebnis für sehr viele Threads wieder näher an des richtige Ergebnis geht. Vermutlich verringert sich hier die Wahrscheinlichkeit des gleichzeitigen Zugriffs, da das managen der Threads mehr Rechenleistung verlangt und die Summation so verlangsamt. Die Ergebnisse sind aber trotzdem weder richtig, noch verlässlich.
+b) 
+Der Einsatz des Mutex für die globale Summationsvariable verhindert einen gleichzeitigen Zugriff. Die Ergebnisse sind für die getesteten Anzahl von Threads alle "richtig". Wichtiger Unterschied zur einfachen (sequenziellen) Summation ist hier aber die Reihenfolge. Die Threads greifen in unterschiedlicher Reiehnfolge auf die Summationsvariable zu. Die dabei entstehenende Rundungsfehler führen zu leicht unterschiedlichen Ergebnissen verglichen mit der einfachen Variante, aber auch verglichen mit mehrfachen Durchläufen dieser Variante, da die Reihenfolge nicht festgelegt ist.
+c)
+Die Laufzeiten sind wieder vergleichbar mit der mutexfreien Variante. Die Ergebnisse sind auch richtig. 
+
+
+Programmausgabe 10/11:
+
+Direct       : 6.25e+016
+Single Thread: 17.5238ms        6.25e+016
+Multi Thread
+Procs: 1        23.1889ms       6.25e+016
+Procs: 2        13.6927ms       6.25e+016
+Procs: 4        10.0261ms       6.25e+016
+Procs: 8        12.5333ms       6.25e+016
+Procs: 16       19.6737ms       6.25e+016
+Procs: 32       34.5909ms       6.25e+016
+Procs: 64       71.1894ms       6.25e+016
+Procs: 128      143.381ms       6.25e+016
+Procs: 256      273.728ms       6.25e+016
+Multi Thread Global Variable No Mutex
+Procs: 1        19.5525ms       6.25e+016
+Procs: 2        12.6897ms       4.7024e+016
+Procs: 4        10.4124ms       2.82014e+016
+Procs: 8        12.031ms        2.8347e+016
+Procs: 16       18.0475ms       4.29486e+016
+Procs: 32       33.0881ms       6.18975e+016
+Procs: 64       69.6852ms       6.25e+016
+Procs: 128      137.365ms       6.25e+016
+Procs: 256      267.712ms       6.25e+016
+Multi Thread Global Variable Summation Mutex
+Procs: 1        9373.6ms        6.25e+016
+Procs: 2        55257.9ms       6.25e+016
+Procs: 4        39175.3ms       6.25e+016
+Procs: 8        39173.4ms       6.25e+016
+Procs: 16       39248ms         6.25e+016
+Procs: 32       39462.8ms       6.25e+016
+Procs: 64       40096.5ms       6.25e+016
+Procs: 128      39713.7ms       6.25e+016
+Procs: 256      40419.9ms       6.25e+016
+Multi Thread Global Variable Result Mutex
+Procs: 1        21.6072ms       6.25e+016
+Procs: 2        13.9267ms       6.25e+016
+Procs: 4        11.533ms        6.25e+016
+Procs: 8        11.5315ms       6.25e+016
+Procs: 16       18.5493ms       6.25e+016
+Procs: 32       33.0889ms       6.25e+016
+Procs: 64       69.1836ms       6.25e+016
+Procs: 128      141.376ms       6.25e+016
+Procs: 256      277.016ms       6.25e+016

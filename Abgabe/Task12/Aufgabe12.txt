@@ -1,0 +1,65 @@
+Verwendete Prozessor: i7-6700K mit 4 Kernen, 8 logische Prozessoren, L1/L2/L3 Cache 256KB, 1MB, 8MB
+
+Aufgabe 12:
+
+a) Die Laufzeiten sind unten angehängt. Das Programm wurde einmal ohne und einmal mit Kompileroptimierung (O3) ausgeführt. Das Verhalten der Laufzeiten sind sehr unterschiedlich. 
+
+Ohne Kompileroptimierung wird die Laufzeit jeweils um einen Faktor 2 bzw. 4 besser für 2 und 4 Threads. Danach bleiben die Laufzeiten eher gleich. (Anzahl der Kerne < Anzahl der Threads). Der Speedup entspricht hier also im besten Fall der Anzahl der Prozessorkerne. 
+
+Für die O3 Optimierung zeigt sich ein grundsätzlich ähnliches Verhalten. Die Laufzeiten werden besser, aber nur wenige Prozent. Der Grund dafür ist mir nicht ganz klar. Ich würde vermuten, dass der Kompiler das vorliegende Problem so weit optimiert, dass die Laufzeit größtenteils durch die Speicherzugriffe zustande kommt. Das Verteilen der Rechenlast würde dann keinen nennswerten Speedup bringen, da Speicherzugriffe auf die gemeinsame Variable (Iterationsvektoren) nicht beschleunigt werden können. 
+
+
+Unabhängig von Optimierung zeigt sich, dass die Variante mit einer PThread Barrier zum synchronisieren grob 10% schneller ist, als die Variante der neuen Threaderzeugung in jedem Iterationsschritt. 
+
+
+c) Ein Blockweiser Gauß-Seidel wäre möglich. Die Threads können den Gauß-Seidel auf den ihnen zugewiesenen Blöcken durchführen. Nur an den Grenzen, wo zwei Prozessoren auf den Vektor zugreifen, fehlen in einem Fall die Werte die im vorhergehenden Schritt berechnet werden bzw. im anderen Fall stehen sogar zusätzliche neuere Werte zur Verfügung. 
+
+
+
+
+
+
+Ausgabe Programm ohne O3:
+
+Threadless Jacobi finished after 11200.9ms.
+
+Jacobi with PThreads started
+Calculation finished with  1 threads after 11998.2ms.
+Calculation finished with  2 threads after 6512.63ms.
+Calculation finished with  4 threads after 3740.76ms.
+Calculation finished with  8 threads after 3396.04ms.
+Calculation finished with 16 threads after 3491.3ms.
+Calculation finished with 32 threads after 3886.87ms.
+
+Jacobi with PThreads Sync started
+Calculation finished with  1 threads after 11167.4ms.
+Calculation finished with  2 threads after 5722.97ms.
+Calculation finished with  4 threads after 3423.48ms.
+Calculation finished with  8 threads after 2863.11ms.
+Calculation finished with 16 threads after 2976.92ms.
+Calculation finished with 32 threads after 2956.36ms.
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+
+Ausgabe Programm mit O3:
+
+Threadless Jacobi finished after 2250.49ms.
+
+Jacobi with PThreads started
+Calculation finished with  1 threads after 2980.72ms.
+Calculation finished with  2 threads after 2490.77ms.
+Calculation finished with  4 threads after 2267.76ms.
+Calculation finished with  8 threads after 2229.94ms.
+Calculation finished with 16 threads after 2354.26ms.
+Calculation finished with 32 threads after 2741.8ms.
+
+Jacobi with PThreads Sync started
+Calculation finished with  1 threads after 2309.7ms.
+Calculation finished with  2 threads after 2023.43ms.
+Calculation finished with  4 threads after 1903.61ms.
+Calculation finished with  8 threads after 2081.52ms.
+Calculation finished with 16 threads after 2090.31ms.
+Calculation finished with 32 threads after 2186.1ms.
+
