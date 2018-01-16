@@ -22,7 +22,7 @@ void* subrScalarprodPThread(void* param);
 void* subrScalarprodPThreadGlobalNoMutex(void* param);
 void* subrScalarprodPThreadGlobalSummationMutex(void* param);
 void* subrScalarprodPThreadGlobalResultMutex(void* param);
-
+void* subrScalarprodPThreadNotCached(void* param);
 
 double globalTestSum=0;
 
@@ -154,7 +154,7 @@ double scalarprodPThread(double *a, double *b, int n, int procs) {
         messArray[i].n=(i<procs-1)?numOfVals:n-numOfVals*(procs-1);
         messArray[i].sum=0;
 
-        pthread_create(&tid, NULL, subrScalarprodPThread, (void*) &messArray[i]);
+        pthread_create(&tid, NULL, subrScalarprodPThreadNotCached, (void*) &messArray[i]);
         thread_id[i]=tid;
 
     }
@@ -269,6 +269,16 @@ double scalarprodPThreadGlobalResultMutex(double *a, double *b, int n, int procs
 }
 
 void* subrScalarprodPThread(void* param) {
+    messagetype *mess=(messagetype *) param;
+    double sum=0;
+    double *a=mess->a,*b=mess->b;
+    int n=mess->n;
+    for(int i=0;i<n;i++) {
+        sum+a[i]*b[i];
+    }
+    mess->sum=sum;
+}
+void* subrScalarprodPThreadNotCached(void* param) {
     messagetype *mess=(messagetype *) param;
     mess->sum=0;
     for(int i=0;i<mess->n;i++) {

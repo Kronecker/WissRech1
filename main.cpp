@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     std::cout << "Hello, World!" << std::endl;
 
-  solveTask12();
+  solveTask10();
 
     return 0;
 }
